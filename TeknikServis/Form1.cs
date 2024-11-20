@@ -23,5 +23,11 @@ namespace TeknikServis
             frmProductList.MdiParent = this;
             frmProductList.Show();
         }
+
+        private void btnNewProduct_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.FrmNewProduct frmProductList = new Forms.FrmNewProduct();
+            frmProductList.Show();
+        }
     }
 }

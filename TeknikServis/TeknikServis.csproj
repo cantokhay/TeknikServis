@@ -95,6 +95,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FrmNewProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmNewProduct.Designer.cs">
+      <DependentUpon>FrmNewProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmProductList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,13 +140,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TeknikServis.tt</DependentUpon>
     </Compile>
-    <Compile Include="TeknikServis.Designer.cs">
+    <Compile Include="TeknikServisModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>TeknikServis.edmx</DependentUpon>
+      <DependentUpon>TeknikServisModel.edmx</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmNewProduct.resx">
+      <DependentUpon>FrmNewProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmProductList.resx">
       <DependentUpon>FrmProductList.cs</DependentUpon>
@@ -165,12 +174,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EntityDeploy Include="TeknikServis.edmx">
+    <EntityDeploy Include="TeknikServisModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>TeknikServis.Designer.cs</LastGenOutput>
+      <LastGenOutput>TeknikServisModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="TeknikServis.edmx.diagram">
-      <DependentUpon>TeknikServis.edmx</DependentUpon>
+    <None Include="TeknikServisModel.edmx.diagram">
+      <DependentUpon>TeknikServisModel.edmx</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -180,11 +189,11 @@
     <Content Include="TeknikServis.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>TeknikServis.Context.cs</LastGenOutput>
-      <DependentUpon>TeknikServis.edmx</DependentUpon>
+      <DependentUpon>TeknikServisModel.edmx</DependentUpon>
     </Content>
     <Content Include="TeknikServis.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>TeknikServis.edmx</DependentUpon>
+      <DependentUpon>TeknikServisModel.edmx</DependentUpon>
       <LastGenOutput>TeknikServis.cs</LastGenOutput>
     </Content>
   </ItemGroup>
