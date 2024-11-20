@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="148936fd16ea42c5827f3e2ceab0c41f" Name="Diagram1">
+        <EntityTypeShape EntityType="TeknikServisDBModel.Action" Width="1.5" PointX="5.25" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TeknikServisDBModel.Admin" Width="1.5" PointX="7.75" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TeknikServisDBModel.Category" Width="1.5" PointX="0.75" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TeknikServisDBModel.Customer" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TeknikServisDBModel.Departmant" Width="1.5" PointX="0.75" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TeknikServisDBModel.Employee" Width="1.5" PointX="3" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TeknikServisDBModel.Expense" Width="1.5" PointX="9.75" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TeknikServisDBModel.FaultDetail" Width="1.5" PointX="9.75" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TeknikServisDBModel.Invoice" Width="1.5" PointX="5.25" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TeknikServisDBModel.InvoiceDetail" Width="1.5" PointX="7.5" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TeknikServisDBModel.Note" Width="1.5" PointX="10.75" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TeknikServisDBModel.Product" Width="1.5" PointX="3" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="TeknikServisDBModel.ProductTrace" Width="1.5" PointX="5.25" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="TeknikServisDBModel.Sale" Width="1.5" PointX="8.25" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TeknikServisDBModel.sysdiagrams" Width="1.5" PointX="11.75" PointY="2.375" IsExpanded="true" />
+        <AssociationConnector Association="TeknikServisDBModel.FK_Action_Customer" ManuallyRouted="false" />
+        <AssociationConnector Association="TeknikServisDBModel.FK_Action_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="TeknikServisDBModel.FK_Action_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="TeknikServisDBModel.FK_Product_Category" ManuallyRouted="false" />
+        <AssociationConnector Association="TeknikServisDBModel.FK_Invoice_Customer" ManuallyRouted="false" />
+        <AssociationConnector Association="TeknikServisDBModel.FK_Sale_Customer" ManuallyRouted="false" />
+        <AssociationConnector Association="TeknikServisDBModel.FK_Employee_Departmant" ManuallyRouted="false" />
+        <AssociationConnector Association="TeknikServisDBModel.FK_Invoice_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="TeknikServisDBModel.FK_Sale_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="TeknikServisDBModel.FK_InvoiceDetail_Invoice" ManuallyRouted="false" />
+        <AssociationConnector Association="TeknikServisDBModel.FK_ProductTrace_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="TeknikServisDBModel.FK_Sale_Product" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
