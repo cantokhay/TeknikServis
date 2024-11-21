@@ -35,5 +35,12 @@ namespace TeknikServis
             frmProductStats.MdiParent = this;
             frmProductStats.Show();
         }
+
+        private void btnBrandStats_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.FrmBrandsStats frmBrandsStats = new Forms.FrmBrandsStats();
+            frmBrandsStats.MdiParent = this;
+            frmBrandsStats.Show();
+        }
     }
 }

@@ -75,8 +75,8 @@
             this.lblTotalBrandsLabel = new DevExpress.XtraEditors.LabelControl();
             this.panel12 = new System.Windows.Forms.Panel();
             this.pictureEdit12 = new DevExpress.XtraEditors.PictureEdit();
-            this.lblTotalSmallApplianceStat = new DevExpress.XtraEditors.LabelControl();
-            this.lblTotalSmallApplianceLabel = new DevExpress.XtraEditors.LabelControl();
+            this.lblTotalApplianceStat = new DevExpress.XtraEditors.LabelControl();
+            this.lblTotalApplianceLabel = new DevExpress.XtraEditors.LabelControl();
             this.panel13 = new System.Windows.Forms.Panel();
             this.pictureEdit13 = new DevExpress.XtraEditors.PictureEdit();
             this.lblMostStockedBrandStat = new DevExpress.XtraEditors.LabelControl();
@@ -91,8 +91,8 @@
             this.lblFaultyProductsLabel = new DevExpress.XtraEditors.LabelControl();
             this.panel16 = new System.Windows.Forms.Panel();
             this.pictureEdit16 = new DevExpress.XtraEditors.PictureEdit();
-            this.lblTotalHomeApplianceStat = new DevExpress.XtraEditors.LabelControl();
-            this.lblTotalHomeApplianceLabel = new DevExpress.XtraEditors.LabelControl();
+            this.lblTotalGamingStat = new DevExpress.XtraEditors.LabelControl();
+            this.lblTotalGamingLabel = new DevExpress.XtraEditors.LabelControl();
             this.panel17 = new System.Windows.Forms.Panel();
             this.pictureEdit17 = new DevExpress.XtraEditors.PictureEdit();
             this.lblProductsUnderRepairStat = new DevExpress.XtraEditors.LabelControl();
@@ -186,9 +186,9 @@
             this.lblTotalProductStat.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.lblTotalProductStat.Location = new System.Drawing.Point(12, 42);
             this.lblTotalProductStat.Name = "lblTotalProductStat";
-            this.lblTotalProductStat.Size = new System.Drawing.Size(54, 45);
+            this.lblTotalProductStat.Size = new System.Drawing.Size(82, 45);
             this.lblTotalProductStat.TabIndex = 0;
-            this.lblTotalProductStat.Text = "588";
+            this.lblTotalProductStat.Text = "666??";
             // 
             // lblTotalProductLabel
             // 
@@ -237,9 +237,9 @@
             this.lblTotalCategoriesStat.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.lblTotalCategoriesStat.Location = new System.Drawing.Point(12, 42);
             this.lblTotalCategoriesStat.Name = "lblTotalCategoriesStat";
-            this.lblTotalCategoriesStat.Size = new System.Drawing.Size(54, 45);
+            this.lblTotalCategoriesStat.Size = new System.Drawing.Size(82, 45);
             this.lblTotalCategoriesStat.TabIndex = 0;
-            this.lblTotalCategoriesStat.Text = "588";
+            this.lblTotalCategoriesStat.Text = "666??";
             // 
             // lblTotalCategoriesLabel
             // 
@@ -288,9 +288,9 @@
             this.lblTotalStockStat.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.lblTotalStockStat.Location = new System.Drawing.Point(12, 42);
             this.lblTotalStockStat.Name = "lblTotalStockStat";
-            this.lblTotalStockStat.Size = new System.Drawing.Size(54, 45);
+            this.lblTotalStockStat.Size = new System.Drawing.Size(82, 45);
             this.lblTotalStockStat.TabIndex = 0;
-            this.lblTotalStockStat.Text = "588";
+            this.lblTotalStockStat.Text = "666??";
             // 
             // lblTotalStockLabel
             // 
@@ -339,9 +339,9 @@
             this.lblCritLevelStat.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.lblCritLevelStat.Location = new System.Drawing.Point(12, 42);
             this.lblCritLevelStat.Name = "lblCritLevelStat";
-            this.lblCritLevelStat.Size = new System.Drawing.Size(54, 45);
+            this.lblCritLevelStat.Size = new System.Drawing.Size(82, 45);
             this.lblCritLevelStat.TabIndex = 0;
-            this.lblCritLevelStat.Text = "588";
+            this.lblCritLevelStat.Text = "666??";
             // 
             // lblCritLevelLabel
             // 
@@ -390,9 +390,9 @@
             this.lblTodaySoldProductsStat.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.lblTodaySoldProductsStat.Location = new System.Drawing.Point(12, 42);
             this.lblTodaySoldProductsStat.Name = "lblTodaySoldProductsStat";
-            this.lblTodaySoldProductsStat.Size = new System.Drawing.Size(54, 45);
+            this.lblTodaySoldProductsStat.Size = new System.Drawing.Size(82, 45);
             this.lblTodaySoldProductsStat.TabIndex = 0;
-            this.lblTodaySoldProductsStat.Text = "588";
+            this.lblTodaySoldProductsStat.Text = "666??";
             // 
             // lblTodaySoldProductsLabel
             // 
@@ -441,9 +441,9 @@
             this.lblMaxStockProductStat.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.lblMaxStockProductStat.Location = new System.Drawing.Point(8, 50);
             this.lblMaxStockProductStat.Name = "lblMaxStockProductStat";
-            this.lblMaxStockProductStat.Size = new System.Drawing.Size(42, 32);
+            this.lblMaxStockProductStat.Size = new System.Drawing.Size(64, 32);
             this.lblMaxStockProductStat.TabIndex = 0;
-            this.lblMaxStockProductStat.Text = "588";
+            this.lblMaxStockProductStat.Text = "666??";
             // 
             // lblMaxStockProductLabel
             // 
@@ -492,9 +492,9 @@
             this.lblMinStockProductStat.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.lblMinStockProductStat.Location = new System.Drawing.Point(8, 50);
             this.lblMinStockProductStat.Name = "lblMinStockProductStat";
-            this.lblMinStockProductStat.Size = new System.Drawing.Size(42, 32);
+            this.lblMinStockProductStat.Size = new System.Drawing.Size(64, 32);
             this.lblMinStockProductStat.TabIndex = 0;
-            this.lblMinStockProductStat.Text = "588";
+            this.lblMinStockProductStat.Text = "666??";
             // 
             // lblMinStockProductLabel
             // 
@@ -543,9 +543,9 @@
             this.lblMostProductCategoryStat.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.lblMostProductCategoryStat.Location = new System.Drawing.Point(8, 50);
             this.lblMostProductCategoryStat.Name = "lblMostProductCategoryStat";
-            this.lblMostProductCategoryStat.Size = new System.Drawing.Size(42, 32);
+            this.lblMostProductCategoryStat.Size = new System.Drawing.Size(64, 32);
             this.lblMostProductCategoryStat.TabIndex = 0;
-            this.lblMostProductCategoryStat.Text = "588";
+            this.lblMostProductCategoryStat.Text = "666??";
             // 
             // lblMostProductCategoryLabel
             // 
@@ -594,9 +594,9 @@
             this.lblMaxPricedProductStat.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.lblMaxPricedProductStat.Location = new System.Drawing.Point(8, 50);
             this.lblMaxPricedProductStat.Name = "lblMaxPricedProductStat";
-            this.lblMaxPricedProductStat.Size = new System.Drawing.Size(42, 32);
+            this.lblMaxPricedProductStat.Size = new System.Drawing.Size(64, 32);
             this.lblMaxPricedProductStat.TabIndex = 0;
-            this.lblMaxPricedProductStat.Text = "588";
+            this.lblMaxPricedProductStat.Text = "666??";
             // 
             // lblMaxPricedProductLabel
             // 
@@ -645,9 +645,9 @@
             this.lblMinPricedProductStat.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.lblMinPricedProductStat.Location = new System.Drawing.Point(8, 50);
             this.lblMinPricedProductStat.Name = "lblMinPricedProductStat";
-            this.lblMinPricedProductStat.Size = new System.Drawing.Size(42, 32);
+            this.lblMinPricedProductStat.Size = new System.Drawing.Size(64, 32);
             this.lblMinPricedProductStat.TabIndex = 0;
-            this.lblMinPricedProductStat.Text = "588";
+            this.lblMinPricedProductStat.Text = "666??";
             // 
             // lblMinPricedProductLabel
             // 
@@ -696,9 +696,9 @@
             this.lblTotalBrandsStat.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.lblTotalBrandsStat.Location = new System.Drawing.Point(12, 42);
             this.lblTotalBrandsStat.Name = "lblTotalBrandsStat";
-            this.lblTotalBrandsStat.Size = new System.Drawing.Size(54, 45);
+            this.lblTotalBrandsStat.Size = new System.Drawing.Size(82, 45);
             this.lblTotalBrandsStat.TabIndex = 0;
-            this.lblTotalBrandsStat.Text = "588";
+            this.lblTotalBrandsStat.Text = "666??";
             // 
             // lblTotalBrandsLabel
             // 
@@ -716,8 +716,8 @@
             // 
             this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(188)))), ((int)(((byte)(156)))));
             this.panel12.Controls.Add(this.pictureEdit12);
-            this.panel12.Controls.Add(this.lblTotalSmallApplianceStat);
-            this.panel12.Controls.Add(this.lblTotalSmallApplianceLabel);
+            this.panel12.Controls.Add(this.lblTotalApplianceStat);
+            this.panel12.Controls.Add(this.lblTotalApplianceLabel);
             this.panel12.Location = new System.Drawing.Point(12, 403);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(250, 98);
@@ -736,32 +736,32 @@
             this.pictureEdit12.Size = new System.Drawing.Size(50, 50);
             this.pictureEdit12.TabIndex = 1;
             // 
-            // lblTotalSmallApplianceStat
+            // lblTotalApplianceStat
             // 
-            this.lblTotalSmallApplianceStat.Appearance.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblTotalSmallApplianceStat.Appearance.ForeColor = System.Drawing.Color.White;
-            this.lblTotalSmallApplianceStat.Appearance.Options.UseFont = true;
-            this.lblTotalSmallApplianceStat.Appearance.Options.UseForeColor = true;
-            this.lblTotalSmallApplianceStat.Appearance.Options.UseTextOptions = true;
-            this.lblTotalSmallApplianceStat.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.lblTotalSmallApplianceStat.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.lblTotalSmallApplianceStat.Location = new System.Drawing.Point(12, 42);
-            this.lblTotalSmallApplianceStat.Name = "lblTotalSmallApplianceStat";
-            this.lblTotalSmallApplianceStat.Size = new System.Drawing.Size(54, 45);
-            this.lblTotalSmallApplianceStat.TabIndex = 0;
-            this.lblTotalSmallApplianceStat.Text = "588";
+            this.lblTotalApplianceStat.Appearance.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblTotalApplianceStat.Appearance.ForeColor = System.Drawing.Color.White;
+            this.lblTotalApplianceStat.Appearance.Options.UseFont = true;
+            this.lblTotalApplianceStat.Appearance.Options.UseForeColor = true;
+            this.lblTotalApplianceStat.Appearance.Options.UseTextOptions = true;
+            this.lblTotalApplianceStat.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.lblTotalApplianceStat.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.lblTotalApplianceStat.Location = new System.Drawing.Point(12, 42);
+            this.lblTotalApplianceStat.Name = "lblTotalApplianceStat";
+            this.lblTotalApplianceStat.Size = new System.Drawing.Size(82, 45);
+            this.lblTotalApplianceStat.TabIndex = 0;
+            this.lblTotalApplianceStat.Text = "666??";
             // 
-            // lblTotalSmallApplianceLabel
+            // lblTotalApplianceLabel
             // 
-            this.lblTotalSmallApplianceLabel.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblTotalSmallApplianceLabel.Appearance.ForeColor = System.Drawing.Color.White;
-            this.lblTotalSmallApplianceLabel.Appearance.Options.UseFont = true;
-            this.lblTotalSmallApplianceLabel.Appearance.Options.UseForeColor = true;
-            this.lblTotalSmallApplianceLabel.Location = new System.Drawing.Point(24, 12);
-            this.lblTotalSmallApplianceLabel.Name = "lblTotalSmallApplianceLabel";
-            this.lblTotalSmallApplianceLabel.Size = new System.Drawing.Size(203, 20);
-            this.lblTotalSmallApplianceLabel.TabIndex = 0;
-            this.lblTotalSmallApplianceLabel.Text = "Total Small Appliance in Stock";
+            this.lblTotalApplianceLabel.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblTotalApplianceLabel.Appearance.ForeColor = System.Drawing.Color.White;
+            this.lblTotalApplianceLabel.Appearance.Options.UseFont = true;
+            this.lblTotalApplianceLabel.Appearance.Options.UseForeColor = true;
+            this.lblTotalApplianceLabel.Location = new System.Drawing.Point(45, 12);
+            this.lblTotalApplianceLabel.Name = "lblTotalApplianceLabel";
+            this.lblTotalApplianceLabel.Size = new System.Drawing.Size(162, 20);
+            this.lblTotalApplianceLabel.TabIndex = 0;
+            this.lblTotalApplianceLabel.Text = "Total Appliance in Stock";
             // 
             // panel13
             // 
@@ -798,9 +798,9 @@
             this.lblMostStockedBrandStat.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.lblMostStockedBrandStat.Location = new System.Drawing.Point(8, 50);
             this.lblMostStockedBrandStat.Name = "lblMostStockedBrandStat";
-            this.lblMostStockedBrandStat.Size = new System.Drawing.Size(42, 32);
+            this.lblMostStockedBrandStat.Size = new System.Drawing.Size(64, 32);
             this.lblMostStockedBrandStat.TabIndex = 0;
-            this.lblMostStockedBrandStat.Text = "588";
+            this.lblMostStockedBrandStat.Text = "666??";
             // 
             // lblMostStockedBrandLabel
             // 
@@ -849,9 +849,9 @@
             this.lblTotalComputersStat.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.lblTotalComputersStat.Location = new System.Drawing.Point(12, 42);
             this.lblTotalComputersStat.Name = "lblTotalComputersStat";
-            this.lblTotalComputersStat.Size = new System.Drawing.Size(54, 45);
+            this.lblTotalComputersStat.Size = new System.Drawing.Size(82, 45);
             this.lblTotalComputersStat.TabIndex = 0;
-            this.lblTotalComputersStat.Text = "588";
+            this.lblTotalComputersStat.Text = "666??";
             // 
             // lblTotalComputersLabel
             // 
@@ -900,9 +900,9 @@
             this.lblFaultyProductsStat.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.lblFaultyProductsStat.Location = new System.Drawing.Point(12, 42);
             this.lblFaultyProductsStat.Name = "lblFaultyProductsStat";
-            this.lblFaultyProductsStat.Size = new System.Drawing.Size(54, 45);
+            this.lblFaultyProductsStat.Size = new System.Drawing.Size(82, 45);
             this.lblFaultyProductsStat.TabIndex = 0;
-            this.lblFaultyProductsStat.Text = "588";
+            this.lblFaultyProductsStat.Text = "666??";
             // 
             // lblFaultyProductsLabel
             // 
@@ -920,8 +920,8 @@
             // 
             this.panel16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(89)))), ((int)(((byte)(182)))));
             this.panel16.Controls.Add(this.pictureEdit16);
-            this.panel16.Controls.Add(this.lblTotalHomeApplianceStat);
-            this.panel16.Controls.Add(this.lblTotalHomeApplianceLabel);
+            this.panel16.Controls.Add(this.lblTotalGamingStat);
+            this.panel16.Controls.Add(this.lblTotalGamingLabel);
             this.panel16.Location = new System.Drawing.Point(562, 403);
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(250, 98);
@@ -940,32 +940,32 @@
             this.pictureEdit16.Size = new System.Drawing.Size(50, 50);
             this.pictureEdit16.TabIndex = 1;
             // 
-            // lblTotalHomeApplianceStat
+            // lblTotalGamingStat
             // 
-            this.lblTotalHomeApplianceStat.Appearance.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblTotalHomeApplianceStat.Appearance.ForeColor = System.Drawing.Color.White;
-            this.lblTotalHomeApplianceStat.Appearance.Options.UseFont = true;
-            this.lblTotalHomeApplianceStat.Appearance.Options.UseForeColor = true;
-            this.lblTotalHomeApplianceStat.Appearance.Options.UseTextOptions = true;
-            this.lblTotalHomeApplianceStat.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.lblTotalHomeApplianceStat.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.lblTotalHomeApplianceStat.Location = new System.Drawing.Point(12, 42);
-            this.lblTotalHomeApplianceStat.Name = "lblTotalHomeApplianceStat";
-            this.lblTotalHomeApplianceStat.Size = new System.Drawing.Size(54, 45);
-            this.lblTotalHomeApplianceStat.TabIndex = 0;
-            this.lblTotalHomeApplianceStat.Text = "588";
+            this.lblTotalGamingStat.Appearance.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblTotalGamingStat.Appearance.ForeColor = System.Drawing.Color.White;
+            this.lblTotalGamingStat.Appearance.Options.UseFont = true;
+            this.lblTotalGamingStat.Appearance.Options.UseForeColor = true;
+            this.lblTotalGamingStat.Appearance.Options.UseTextOptions = true;
+            this.lblTotalGamingStat.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.lblTotalGamingStat.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.lblTotalGamingStat.Location = new System.Drawing.Point(12, 42);
+            this.lblTotalGamingStat.Name = "lblTotalGamingStat";
+            this.lblTotalGamingStat.Size = new System.Drawing.Size(82, 45);
+            this.lblTotalGamingStat.TabIndex = 0;
+            this.lblTotalGamingStat.Text = "666??";
             // 
-            // lblTotalHomeApplianceLabel
+            // lblTotalGamingLabel
             // 
-            this.lblTotalHomeApplianceLabel.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblTotalHomeApplianceLabel.Appearance.ForeColor = System.Drawing.Color.White;
-            this.lblTotalHomeApplianceLabel.Appearance.Options.UseFont = true;
-            this.lblTotalHomeApplianceLabel.Appearance.Options.UseForeColor = true;
-            this.lblTotalHomeApplianceLabel.Location = new System.Drawing.Point(22, 12);
-            this.lblTotalHomeApplianceLabel.Name = "lblTotalHomeApplianceLabel";
-            this.lblTotalHomeApplianceLabel.Size = new System.Drawing.Size(207, 20);
-            this.lblTotalHomeApplianceLabel.TabIndex = 0;
-            this.lblTotalHomeApplianceLabel.Text = "Total Home Appliance in Stock";
+            this.lblTotalGamingLabel.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblTotalGamingLabel.Appearance.ForeColor = System.Drawing.Color.White;
+            this.lblTotalGamingLabel.Appearance.Options.UseFont = true;
+            this.lblTotalGamingLabel.Appearance.Options.UseForeColor = true;
+            this.lblTotalGamingLabel.Location = new System.Drawing.Point(23, 12);
+            this.lblTotalGamingLabel.Name = "lblTotalGamingLabel";
+            this.lblTotalGamingLabel.Size = new System.Drawing.Size(208, 20);
+            this.lblTotalGamingLabel.TabIndex = 0;
+            this.lblTotalGamingLabel.Text = "Total Gaming Products in Stock";
             // 
             // panel17
             // 
@@ -1002,9 +1002,9 @@
             this.lblProductsUnderRepairStat.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.lblProductsUnderRepairStat.Location = new System.Drawing.Point(12, 42);
             this.lblProductsUnderRepairStat.Name = "lblProductsUnderRepairStat";
-            this.lblProductsUnderRepairStat.Size = new System.Drawing.Size(54, 45);
+            this.lblProductsUnderRepairStat.Size = new System.Drawing.Size(82, 45);
             this.lblProductsUnderRepairStat.TabIndex = 0;
-            this.lblProductsUnderRepairStat.Text = "588";
+            this.lblProductsUnderRepairStat.Text = "666??";
             // 
             // lblProductsUnderRepairLabel
             // 
@@ -1053,9 +1053,9 @@
             this.lblProductsAfterRepairStat.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.lblProductsAfterRepairStat.Location = new System.Drawing.Point(12, 42);
             this.lblProductsAfterRepairStat.Name = "lblProductsAfterRepairStat";
-            this.lblProductsAfterRepairStat.Size = new System.Drawing.Size(54, 45);
+            this.lblProductsAfterRepairStat.Size = new System.Drawing.Size(82, 45);
             this.lblProductsAfterRepairStat.TabIndex = 0;
-            this.lblProductsAfterRepairStat.Text = "588";
+            this.lblProductsAfterRepairStat.Text = "666??";
             // 
             // lblProductsAfterRepairLabel
             // 
@@ -1104,9 +1104,9 @@
             this.lblTodayFaultyProductsStat.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.lblTodayFaultyProductsStat.Location = new System.Drawing.Point(12, 42);
             this.lblTodayFaultyProductsStat.Name = "lblTodayFaultyProductsStat";
-            this.lblTodayFaultyProductsStat.Size = new System.Drawing.Size(54, 45);
+            this.lblTodayFaultyProductsStat.Size = new System.Drawing.Size(82, 45);
             this.lblTodayFaultyProductsStat.TabIndex = 0;
-            this.lblTodayFaultyProductsStat.Text = "588";
+            this.lblTodayFaultyProductsStat.Text = "666??";
             // 
             // lblTodayFaultyProductsLabel
             // 
@@ -1155,9 +1155,9 @@
             this.lblProductsReadyCargoStat.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
             this.lblProductsReadyCargoStat.Location = new System.Drawing.Point(12, 42);
             this.lblProductsReadyCargoStat.Name = "lblProductsReadyCargoStat";
-            this.lblProductsReadyCargoStat.Size = new System.Drawing.Size(54, 45);
+            this.lblProductsReadyCargoStat.Size = new System.Drawing.Size(82, 45);
             this.lblProductsReadyCargoStat.TabIndex = 0;
-            this.lblProductsReadyCargoStat.Text = "588";
+            this.lblProductsReadyCargoStat.Text = "666??";
             // 
             // lblProductsReadyCargoLabel
             // 
@@ -1175,7 +1175,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(1370, 541);
             this.Controls.Add(this.panel20);
             this.Controls.Add(this.panel10);
@@ -1312,8 +1312,8 @@
         private DevExpress.XtraEditors.LabelControl lblTotalBrandsLabel;
         private System.Windows.Forms.Panel panel12;
         private DevExpress.XtraEditors.PictureEdit pictureEdit12;
-        private DevExpress.XtraEditors.LabelControl lblTotalSmallApplianceStat;
-        private DevExpress.XtraEditors.LabelControl lblTotalSmallApplianceLabel;
+        private DevExpress.XtraEditors.LabelControl lblTotalApplianceStat;
+        private DevExpress.XtraEditors.LabelControl lblTotalApplianceLabel;
         private System.Windows.Forms.Panel panel13;
         private DevExpress.XtraEditors.PictureEdit pictureEdit13;
         private DevExpress.XtraEditors.LabelControl lblMostStockedBrandStat;
@@ -1328,8 +1328,8 @@
         private DevExpress.XtraEditors.LabelControl lblFaultyProductsLabel;
         private System.Windows.Forms.Panel panel16;
         private DevExpress.XtraEditors.PictureEdit pictureEdit16;
-        private DevExpress.XtraEditors.LabelControl lblTotalHomeApplianceStat;
-        private DevExpress.XtraEditors.LabelControl lblTotalHomeApplianceLabel;
+        private DevExpress.XtraEditors.LabelControl lblTotalGamingStat;
+        private DevExpress.XtraEditors.LabelControl lblTotalGamingLabel;
         private System.Windows.Forms.Panel panel17;
         private DevExpress.XtraEditors.PictureEdit pictureEdit17;
         private DevExpress.XtraEditors.LabelControl lblProductsUnderRepairStat;

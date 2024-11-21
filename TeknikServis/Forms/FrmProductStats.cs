@@ -30,9 +30,9 @@ namespace TeknikServis.Forms
             //lblFaultyProductsStat
             //lblProductsUnderRepairStat
             //lblTodayFaultyProductsStat
-            lblTotalSmallApplianceStat.Text = db.Product.Count(x => x.Category == 3).ToString();
-            lblTotalComputersStat.Text = db.Product.Count(x => x.Category == 1).ToString();
-            lblTotalHomeApplianceStat.Text = db.Product.Count(x => x.Category == 4).ToString();
+            lblTotalApplianceStat.Text = db.Product.Where(x => x.Category == 84).Sum(x => x.Stock).ToString();
+            lblTotalComputersStat.Text = db.Product.Where(x => x.Category == 82).Sum(x => x.Stock).ToString();
+            lblTotalGamingStat.Text = db.Product.Where(x => x.Category == 100).Sum(x => x.Stock).ToString();
             //lblProductsAfterRepairStat
             //lblProductsReadyCargoStat
         }

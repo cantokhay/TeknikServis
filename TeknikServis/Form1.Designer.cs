@@ -37,7 +37,7 @@
             this.btnNewProduct = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
             this.btnProductStats = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnBrandStats = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem10 = new DevExpress.XtraBars.BarButtonItem();
@@ -113,7 +113,7 @@
             this.btnNewProduct,
             this.barButtonItem5,
             this.btnProductStats,
-            this.barButtonItem7,
+            this.btnBrandStats,
             this.barButtonItem8,
             this.barButtonItem9,
             this.barButtonItem10,
@@ -207,12 +207,13 @@
             this.btnProductStats.Name = "btnProductStats";
             this.btnProductStats.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnProductStats_ItemClick);
             // 
-            // barButtonItem7
+            // btnBrandStats
             // 
-            this.barButtonItem7.Caption = "Brand Stats";
-            this.barButtonItem7.Id = 7;
-            this.barButtonItem7.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem7.ImageOptions.LargeImage")));
-            this.barButtonItem7.Name = "barButtonItem7";
+            this.btnBrandStats.Caption = "Brand Stats";
+            this.btnBrandStats.Id = 7;
+            this.btnBrandStats.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem7.ImageOptions.LargeImage")));
+            this.btnBrandStats.Name = "btnBrandStats";
+            this.btnBrandStats.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnBrandStats_ItemClick);
             // 
             // barButtonItem8
             // 
@@ -479,7 +480,7 @@
             // ribbonPageGroup11
             // 
             this.ribbonPageGroup11.ItemLinks.Add(this.btnProductStats);
-            this.ribbonPageGroup11.ItemLinks.Add(this.barButtonItem7);
+            this.ribbonPageGroup11.ItemLinks.Add(this.btnBrandStats);
             this.ribbonPageGroup11.Name = "ribbonPageGroup11";
             this.ribbonPageGroup11.Text = "ribbonPageGroup11";
             // 
@@ -683,7 +684,7 @@
         private DevExpress.XtraBars.BarButtonItem btnNewProduct;
         private DevExpress.XtraBars.BarButtonItem barButtonItem5;
         private DevExpress.XtraBars.BarButtonItem btnProductStats;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem7;
+        private DevExpress.XtraBars.BarButtonItem btnBrandStats;
         private DevExpress.XtraBars.BarButtonItem barButtonItem8;
         private DevExpress.XtraBars.BarButtonItem barButtonItem9;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup11;
