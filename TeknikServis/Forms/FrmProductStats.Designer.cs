@@ -30,9 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmProductStats));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblTotalProductLabel = new DevExpress.XtraEditors.LabelControl();
-            this.lblTotalProductStat = new DevExpress.XtraEditors.LabelControl();
             this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
+            this.lblTotalProductStat = new DevExpress.XtraEditors.LabelControl();
+            this.lblTotalProductLabel = new DevExpress.XtraEditors.LabelControl();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureEdit2 = new DevExpress.XtraEditors.PictureEdit();
             this.lblTotalCategoriesStat = new DevExpress.XtraEditors.LabelControl();
@@ -47,8 +47,8 @@
             this.lblCritLevelLabel = new DevExpress.XtraEditors.LabelControl();
             this.panel5 = new System.Windows.Forms.Panel();
             this.pictureEdit5 = new DevExpress.XtraEditors.PictureEdit();
-            this.lblTotalSoldProductsStat = new DevExpress.XtraEditors.LabelControl();
-            this.lblTotalSoldProductsLabel = new DevExpress.XtraEditors.LabelControl();
+            this.lblTodaySoldProductsStat = new DevExpress.XtraEditors.LabelControl();
+            this.lblTodaySoldProductsLabel = new DevExpress.XtraEditors.LabelControl();
             this.panel6 = new System.Windows.Forms.Panel();
             this.pictureEdit6 = new DevExpress.XtraEditors.PictureEdit();
             this.lblMaxStockProductStat = new DevExpress.XtraEditors.LabelControl();
@@ -162,17 +162,18 @@
             this.panel1.Size = new System.Drawing.Size(250, 98);
             this.panel1.TabIndex = 0;
             // 
-            // lblTotalProductLabel
+            // pictureEdit1
             // 
-            this.lblTotalProductLabel.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblTotalProductLabel.Appearance.ForeColor = System.Drawing.Color.White;
-            this.lblTotalProductLabel.Appearance.Options.UseFont = true;
-            this.lblTotalProductLabel.Appearance.Options.UseForeColor = true;
-            this.lblTotalProductLabel.Location = new System.Drawing.Point(78, 12);
-            this.lblTotalProductLabel.Name = "lblTotalProductLabel";
-            this.lblTotalProductLabel.Size = new System.Drawing.Size(95, 20);
-            this.lblTotalProductLabel.TabIndex = 0;
-            this.lblTotalProductLabel.Text = "Total Products";
+            this.pictureEdit1.EditValue = ((object)(resources.GetObject("pictureEdit1.EditValue")));
+            this.pictureEdit1.Location = new System.Drawing.Point(193, 41);
+            this.pictureEdit1.Name = "pictureEdit1";
+            this.pictureEdit1.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.pictureEdit1.Properties.Appearance.Options.UseBackColor = true;
+            this.pictureEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.pictureEdit1.Size = new System.Drawing.Size(50, 50);
+            this.pictureEdit1.TabIndex = 1;
             // 
             // lblTotalProductStat
             // 
@@ -189,18 +190,17 @@
             this.lblTotalProductStat.TabIndex = 0;
             this.lblTotalProductStat.Text = "588";
             // 
-            // pictureEdit1
+            // lblTotalProductLabel
             // 
-            this.pictureEdit1.EditValue = ((object)(resources.GetObject("pictureEdit1.EditValue")));
-            this.pictureEdit1.Location = new System.Drawing.Point(193, 41);
-            this.pictureEdit1.Name = "pictureEdit1";
-            this.pictureEdit1.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.pictureEdit1.Properties.Appearance.Options.UseBackColor = true;
-            this.pictureEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.pictureEdit1.Size = new System.Drawing.Size(50, 50);
-            this.pictureEdit1.TabIndex = 1;
+            this.lblTotalProductLabel.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblTotalProductLabel.Appearance.ForeColor = System.Drawing.Color.White;
+            this.lblTotalProductLabel.Appearance.Options.UseFont = true;
+            this.lblTotalProductLabel.Appearance.Options.UseForeColor = true;
+            this.lblTotalProductLabel.Location = new System.Drawing.Point(78, 12);
+            this.lblTotalProductLabel.Name = "lblTotalProductLabel";
+            this.lblTotalProductLabel.Size = new System.Drawing.Size(95, 20);
+            this.lblTotalProductLabel.TabIndex = 0;
+            this.lblTotalProductLabel.Text = "Total Products";
             // 
             // panel2
             // 
@@ -359,8 +359,8 @@
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(79)))), ((int)(((byte)(79)))));
             this.panel5.Controls.Add(this.pictureEdit5);
-            this.panel5.Controls.Add(this.lblTotalSoldProductsStat);
-            this.panel5.Controls.Add(this.lblTotalSoldProductsLabel);
+            this.panel5.Controls.Add(this.lblTodaySoldProductsStat);
+            this.panel5.Controls.Add(this.lblTodaySoldProductsLabel);
             this.panel5.Location = new System.Drawing.Point(1112, 43);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(250, 98);
@@ -379,32 +379,32 @@
             this.pictureEdit5.Size = new System.Drawing.Size(50, 50);
             this.pictureEdit5.TabIndex = 1;
             // 
-            // lblTotalSoldProductsStat
+            // lblTodaySoldProductsStat
             // 
-            this.lblTotalSoldProductsStat.Appearance.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblTotalSoldProductsStat.Appearance.ForeColor = System.Drawing.Color.White;
-            this.lblTotalSoldProductsStat.Appearance.Options.UseFont = true;
-            this.lblTotalSoldProductsStat.Appearance.Options.UseForeColor = true;
-            this.lblTotalSoldProductsStat.Appearance.Options.UseTextOptions = true;
-            this.lblTotalSoldProductsStat.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.lblTotalSoldProductsStat.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.lblTotalSoldProductsStat.Location = new System.Drawing.Point(12, 42);
-            this.lblTotalSoldProductsStat.Name = "lblTotalSoldProductsStat";
-            this.lblTotalSoldProductsStat.Size = new System.Drawing.Size(54, 45);
-            this.lblTotalSoldProductsStat.TabIndex = 0;
-            this.lblTotalSoldProductsStat.Text = "588";
+            this.lblTodaySoldProductsStat.Appearance.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblTodaySoldProductsStat.Appearance.ForeColor = System.Drawing.Color.White;
+            this.lblTodaySoldProductsStat.Appearance.Options.UseFont = true;
+            this.lblTodaySoldProductsStat.Appearance.Options.UseForeColor = true;
+            this.lblTodaySoldProductsStat.Appearance.Options.UseTextOptions = true;
+            this.lblTodaySoldProductsStat.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.lblTodaySoldProductsStat.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
+            this.lblTodaySoldProductsStat.Location = new System.Drawing.Point(12, 42);
+            this.lblTodaySoldProductsStat.Name = "lblTodaySoldProductsStat";
+            this.lblTodaySoldProductsStat.Size = new System.Drawing.Size(54, 45);
+            this.lblTodaySoldProductsStat.TabIndex = 0;
+            this.lblTodaySoldProductsStat.Text = "588";
             // 
-            // lblTotalSoldProductsLabel
+            // lblTodaySoldProductsLabel
             // 
-            this.lblTotalSoldProductsLabel.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblTotalSoldProductsLabel.Appearance.ForeColor = System.Drawing.Color.White;
-            this.lblTotalSoldProductsLabel.Appearance.Options.UseFont = true;
-            this.lblTotalSoldProductsLabel.Appearance.Options.UseForeColor = true;
-            this.lblTotalSoldProductsLabel.Location = new System.Drawing.Point(38, 12);
-            this.lblTotalSoldProductsLabel.Name = "lblTotalSoldProductsLabel";
-            this.lblTotalSoldProductsLabel.Size = new System.Drawing.Size(174, 20);
-            this.lblTotalSoldProductsLabel.TabIndex = 0;
-            this.lblTotalSoldProductsLabel.Text = "Total Sold Products Today";
+            this.lblTodaySoldProductsLabel.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblTodaySoldProductsLabel.Appearance.ForeColor = System.Drawing.Color.White;
+            this.lblTodaySoldProductsLabel.Appearance.Options.UseFont = true;
+            this.lblTodaySoldProductsLabel.Appearance.Options.UseForeColor = true;
+            this.lblTodaySoldProductsLabel.Location = new System.Drawing.Point(38, 12);
+            this.lblTodaySoldProductsLabel.Name = "lblTodaySoldProductsLabel";
+            this.lblTodaySoldProductsLabel.Size = new System.Drawing.Size(174, 20);
+            this.lblTodaySoldProductsLabel.TabIndex = 0;
+            this.lblTodaySoldProductsLabel.Text = "Total Sold Products Today";
             // 
             // panel6
             // 
@@ -1284,8 +1284,8 @@
         private DevExpress.XtraEditors.LabelControl lblCritLevelLabel;
         private System.Windows.Forms.Panel panel5;
         private DevExpress.XtraEditors.PictureEdit pictureEdit5;
-        private DevExpress.XtraEditors.LabelControl lblTotalSoldProductsStat;
-        private DevExpress.XtraEditors.LabelControl lblTotalSoldProductsLabel;
+        private DevExpress.XtraEditors.LabelControl lblTodaySoldProductsStat;
+        private DevExpress.XtraEditors.LabelControl lblTodaySoldProductsLabel;
         private System.Windows.Forms.Panel panel6;
         private DevExpress.XtraEditors.PictureEdit pictureEdit6;
         private DevExpress.XtraEditors.LabelControl lblMaxStockProductStat;
