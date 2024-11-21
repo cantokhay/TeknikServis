@@ -300,7 +300,7 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.btnNewProductSave.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnNewProductSave.Appearance.Options.UseFont = true;
-            this.btnNewProductSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.btnNewProductSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnNewProductSave.ImageOptions.Image")));
             this.btnNewProductSave.Location = new System.Drawing.Point(12, 405);
             this.btnNewProductSave.Name = "btnNewProductSave";
             this.btnNewProductSave.Size = new System.Drawing.Size(120, 33);
@@ -313,7 +313,7 @@
             this.btnNewProductQuit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.btnNewProductQuit.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnNewProductQuit.Appearance.Options.UseFont = true;
-            this.btnNewProductQuit.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
+            this.btnNewProductQuit.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnNewProductQuit.ImageOptions.Image")));
             this.btnNewProductQuit.Location = new System.Drawing.Point(155, 405);
             this.btnNewProductQuit.Name = "btnNewProductQuit";
             this.btnNewProductQuit.Size = new System.Drawing.Size(120, 33);

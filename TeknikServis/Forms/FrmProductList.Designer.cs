@@ -65,10 +65,10 @@
             // 
             // grcProductList
             // 
-            this.grcProductList.Location = new System.Drawing.Point(-2, 0);
+            this.grcProductList.Location = new System.Drawing.Point(1, 2);
             this.grcProductList.MainView = this.gvwProducts;
             this.grcProductList.Name = "grcProductList";
-            this.grcProductList.Size = new System.Drawing.Size(1018, 550);
+            this.grcProductList.Size = new System.Drawing.Size(1018, 536);
             this.grcProductList.TabIndex = 0;
             this.grcProductList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvwProducts});
@@ -81,6 +81,7 @@
             this.gvwProducts.Appearance.Row.Options.UseBorderColor = true;
             this.gvwProducts.GridControl = this.grcProductList;
             this.gvwProducts.Name = "gvwProducts";
+            this.gvwProducts.OptionsView.ShowGroupPanel = false;
             this.gvwProducts.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gvwProducts_FocusedRowChanged);
             // 
             // groupControl1
@@ -105,9 +106,9 @@
             this.groupControl1.Controls.Add(this.labelControl1);
             this.groupControl1.Controls.Add(this.txtProductId);
             this.groupControl1.Controls.Add(this.txtProductName);
-            this.groupControl1.Location = new System.Drawing.Point(1022, 0);
+            this.groupControl1.Location = new System.Drawing.Point(1025, 2);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(340, 550);
+            this.groupControl1.Size = new System.Drawing.Size(340, 536);
             this.groupControl1.TabIndex = 7;
             this.groupControl1.Text = "PRODUCT OPERATIONS";
             // 
@@ -279,7 +280,7 @@
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.grcProductList);
             this.Name = "FrmProductList";
-            this.Text = "FrmProductList";
+            this.Text = "Product List";
             this.Load += new System.EventHandler(this.FrmProductList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grcProductList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvwProducts)).EndInit();

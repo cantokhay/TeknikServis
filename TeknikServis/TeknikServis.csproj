@@ -95,6 +95,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FrmCategoryList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmCategoryList.Designer.cs">
+      <DependentUpon>FrmCategoryList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmNewProduct.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +112,12 @@
     </Compile>
     <Compile Include="Forms\FrmProductList.Designer.cs">
       <DependentUpon>FrmProductList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmProductStats.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmProductStats.Designer.cs">
+      <DependentUpon>FrmProductStats.cs</DependentUpon>
     </Compile>
     <Compile Include="Invoice.cs">
       <DependentUpon>TeknikServis.tt</DependentUpon>
@@ -148,11 +160,17 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmCategoryList.resx">
+      <DependentUpon>FrmCategoryList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmNewProduct.resx">
       <DependentUpon>FrmNewProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmProductList.resx">
       <DependentUpon>FrmProductList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmProductStats.resx">
+      <DependentUpon>FrmProductStats.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -186,6 +204,25 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Images\Bookmark.png" />
+    <Content Include="Images\Document.png" />
+    <Content Include="Images\dummy-logo-1.png" />
+    <Content Include="Images\dummy-logo-2.png" />
+    <Content Include="Images\dummy-logo-3.png" />
+    <Content Include="Images\dummy-logo-4.png" />
+    <Content Include="Images\dummy-logo-5.png" />
+    <Content Include="Images\dummy-logo-6.png" />
+    <Content Include="Images\dummy-logo-7.png" />
+    <Content Include="Images\dummy-logo-8.png" />
+    <Content Include="Images\Favorites.png" />
+    <Content Include="Images\Stats-Logo-2.png" />
+    <Content Include="Images\Refresh-Product.png" />
+    <Content Include="Images\Menu.png" />
+    <Content Include="Images\Puzzle.png" />
+    <Content Include="Images\Scroll.png" />
+    <Content Include="Images\Share.png" />
+    <Content Include="Images\Toolbox.png" />
+    <Content Include="Images\Trash Can.png" />
     <Content Include="TeknikServis.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>TeknikServis.Context.cs</LastGenOutput>

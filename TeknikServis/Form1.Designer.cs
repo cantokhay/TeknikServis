@@ -31,12 +31,12 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
-            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnCategoryListForm = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
-            this.BtnProductListForm = new DevExpress.XtraBars.BarButtonItem();
+            this.btnProductListForm = new DevExpress.XtraBars.BarButtonItem();
             this.btnNewProduct = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnProductStats = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
@@ -103,15 +103,16 @@
             // 
             // ribbonControl1
             // 
+            this.ribbonControl1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ribbonControl1.ExpandCollapseItem.Id = 0;
             this.ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbonControl1.ExpandCollapseItem,
-            this.barButtonItem1,
+            this.btnCategoryListForm,
             this.barButtonItem2,
-            this.BtnProductListForm,
+            this.btnProductListForm,
             this.btnNewProduct,
             this.barButtonItem5,
-            this.barButtonItem6,
+            this.btnProductStats,
             this.barButtonItem7,
             this.barButtonItem8,
             this.barButtonItem9,
@@ -160,12 +161,13 @@
             this.ribbonPage7});
             this.ribbonControl1.Size = new System.Drawing.Size(1370, 150);
             // 
-            // barButtonItem1
+            // btnCategoryListForm
             // 
-            this.barButtonItem1.Caption = "Category List";
-            this.barButtonItem1.Id = 1;
-            this.barButtonItem1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
-            this.barButtonItem1.Name = "barButtonItem1";
+            this.btnCategoryListForm.Caption = "Category List";
+            this.btnCategoryListForm.Id = 1;
+            this.btnCategoryListForm.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnCategoryListForm.ImageOptions.LargeImage")));
+            this.btnCategoryListForm.Name = "btnCategoryListForm";
+            this.btnCategoryListForm.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCategoryListForm_ItemClick);
             // 
             // barButtonItem2
             // 
@@ -174,19 +176,19 @@
             this.barButtonItem2.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.LargeImage")));
             this.barButtonItem2.Name = "barButtonItem2";
             // 
-            // BtnProductListForm
+            // btnProductListForm
             // 
-            this.BtnProductListForm.Caption = "Product List";
-            this.BtnProductListForm.Id = 3;
-            this.BtnProductListForm.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BtnProductListForm.ImageOptions.LargeImage")));
-            this.BtnProductListForm.Name = "BtnProductListForm";
-            this.BtnProductListForm.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnProductListForm_ItemClick);
+            this.btnProductListForm.Caption = "Product List";
+            this.btnProductListForm.Id = 3;
+            this.btnProductListForm.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnProductListForm.ImageOptions.LargeImage")));
+            this.btnProductListForm.Name = "btnProductListForm";
+            this.btnProductListForm.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnProductListForm_ItemClick);
             // 
             // btnNewProduct
             // 
             this.btnNewProduct.Caption = "New Product";
             this.btnNewProduct.Id = 4;
-            this.btnNewProduct.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.ImageOptions.LargeImage")));
+            this.btnNewProduct.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnNewProduct.ImageOptions.LargeImage")));
             this.btnNewProduct.Name = "btnNewProduct";
             this.btnNewProduct.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnNewProduct_ItemClick);
             // 
@@ -197,12 +199,13 @@
             this.barButtonItem5.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem5.ImageOptions.LargeImage")));
             this.barButtonItem5.Name = "barButtonItem5";
             // 
-            // barButtonItem6
+            // btnProductStats
             // 
-            this.barButtonItem6.Caption = "Product Stats";
-            this.barButtonItem6.Id = 6;
-            this.barButtonItem6.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem6.ImageOptions.LargeImage")));
-            this.barButtonItem6.Name = "barButtonItem6";
+            this.btnProductStats.Caption = "Product Stats";
+            this.btnProductStats.Id = 6;
+            this.btnProductStats.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnProductStats.ImageOptions.LargeImage")));
+            this.btnProductStats.Name = "btnProductStats";
+            this.btnProductStats.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnProductStats_ItemClick);
             // 
             // barButtonItem7
             // 
@@ -460,14 +463,14 @@
             // 
             // ribbonPageGroup2
             // 
-            this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem1);
+            this.ribbonPageGroup2.ItemLinks.Add(this.btnCategoryListForm);
             this.ribbonPageGroup2.ItemLinks.Add(this.barButtonItem2);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
             this.ribbonPageGroup2.Text = "ribbonPageGroup2";
             // 
             // ribbonPageGroup10
             // 
-            this.ribbonPageGroup10.ItemLinks.Add(this.BtnProductListForm);
+            this.ribbonPageGroup10.ItemLinks.Add(this.btnProductListForm);
             this.ribbonPageGroup10.ItemLinks.Add(this.btnNewProduct);
             this.ribbonPageGroup10.ItemLinks.Add(this.barButtonItem5);
             this.ribbonPageGroup10.Name = "ribbonPageGroup10";
@@ -475,7 +478,7 @@
             // 
             // ribbonPageGroup11
             // 
-            this.ribbonPageGroup11.ItemLinks.Add(this.barButtonItem6);
+            this.ribbonPageGroup11.ItemLinks.Add(this.btnProductStats);
             this.ribbonPageGroup11.ItemLinks.Add(this.barButtonItem7);
             this.ribbonPageGroup11.Name = "ribbonPageGroup11";
             this.ribbonPageGroup11.Text = "ribbonPageGroup11";
@@ -636,12 +639,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.ClientSize = new System.Drawing.Size(1370, 721);
             this.Controls.Add(this.ribbonControl1);
+            this.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.IsMdiContainer = true;
             this.Name = "Form1";
             this.Text = "Form1";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).EndInit();
             this.ResumeLayout(false);
@@ -663,7 +667,7 @@
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage5;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage6;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+        private DevExpress.XtraBars.BarButtonItem btnCategoryListForm;
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup10;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage7;
@@ -675,10 +679,10 @@
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage11;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup9;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage9;
-        private DevExpress.XtraBars.BarButtonItem BtnProductListForm;
+        private DevExpress.XtraBars.BarButtonItem btnProductListForm;
         private DevExpress.XtraBars.BarButtonItem btnNewProduct;
         private DevExpress.XtraBars.BarButtonItem barButtonItem5;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem6;
+        private DevExpress.XtraBars.BarButtonItem btnProductStats;
         private DevExpress.XtraBars.BarButtonItem barButtonItem7;
         private DevExpress.XtraBars.BarButtonItem barButtonItem8;
         private DevExpress.XtraBars.BarButtonItem barButtonItem9;

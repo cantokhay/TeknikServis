@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 
 namespace TeknikServis
 {
@@ -17,17 +9,31 @@ namespace TeknikServis
             InitializeComponent();
         }
 
-        private void BtnProductListForm_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void btnProductListForm_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Forms.FrmProductList frmProductList = new Forms.FrmProductList();
             frmProductList.MdiParent = this;
             frmProductList.Show();
         }
 
+        private void btnCategoryListForm_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.FrmCategoryList frmCategoryList = new Forms.FrmCategoryList();
+            frmCategoryList.MdiParent = this;
+            frmCategoryList.Show();
+        }
+
         private void btnNewProduct_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Forms.FrmNewProduct frmProductList = new Forms.FrmNewProduct();
             frmProductList.Show();
+        }
+
+        private void btnProductStats_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.FrmProductStats frmProductStats = new Forms.FrmProductStats();
+            frmProductStats.MdiParent = this;
+            frmProductStats.Show();
         }
     }
 }

@@ -34,6 +34,7 @@ namespace TeknikServis.Forms
             db.Product.Add(product);
             db.SaveChanges();
             MessageBox.Show("Product Added Successfully", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            ClearProductInfo();
         }
 
         private void bntProductListRefresh_Click(object sender, EventArgs e)
@@ -60,12 +61,13 @@ namespace TeknikServis.Forms
             db.Product.Remove(product);
             db.SaveChanges();
             MessageBox.Show("Product Deleted", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            ClearProductInfo();
         }
 
         private void btnProductUpdate_Click(object sender, EventArgs e)
         {
             int id = int.Parse(txtProductId.Text);
-            var product = db.Product.Find(id); //could cause an issue here. If the id is not found, it will throw an exception.
+            var product = db.Product.Find(id);
 
             if (product != null)
             {
@@ -77,6 +79,7 @@ namespace TeknikServis.Forms
             {
                 MessageBox.Show("Product not found", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            ClearProductInfo();
         }
 
         #region Extracted Methods
