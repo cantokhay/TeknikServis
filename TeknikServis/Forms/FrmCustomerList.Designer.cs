@@ -45,21 +45,21 @@
             this.txtCustomerId = new DevExpress.XtraEditors.TextEdit();
             this.txtCustomerFirstName = new DevExpress.XtraEditors.TextEdit();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.lookUpEdit2 = new DevExpress.XtraEditors.LookUpEdit();
+            this.lookUpEdit1 = new DevExpress.XtraEditors.LookUpEdit();
+            this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
+            this.txtAddress = new DevExpress.XtraEditors.TextEdit();
+            this.txtStatus = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            this.txtTaxNumber = new DevExpress.XtraEditors.TextEdit();
+            this.txtTaxOffice = new DevExpress.XtraEditors.TextEdit();
+            this.txtBank = new DevExpress.XtraEditors.TextEdit();
             this.grcCustomerList = new DevExpress.XtraGrid.GridControl();
             this.gvwCustomers = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.txtBank = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
-            this.txtTaxOffice = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
-            this.txtTaxNumber = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl10 = new DevExpress.XtraEditors.LabelControl();
-            this.txtStatus = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl11 = new DevExpress.XtraEditors.LabelControl();
-            this.txtAddress = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl12 = new DevExpress.XtraEditors.LabelControl();
-            this.lookUpEdit1 = new DevExpress.XtraEditors.LookUpEdit();
-            this.lookUpEdit2 = new DevExpress.XtraEditors.LookUpEdit();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.lblTotalProductStat = new DevExpress.XtraEditors.LabelControl();
@@ -76,22 +76,6 @@
             this.pictureEdit4 = new DevExpress.XtraEditors.PictureEdit();
             this.labelControl17 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl18 = new DevExpress.XtraEditors.LabelControl();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.pictureEdit5 = new DevExpress.XtraEditors.PictureEdit();
-            this.labelControl19 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl20 = new DevExpress.XtraEditors.LabelControl();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.pictureEdit6 = new DevExpress.XtraEditors.PictureEdit();
-            this.labelControl21 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl22 = new DevExpress.XtraEditors.LabelControl();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.pictureEdit7 = new DevExpress.XtraEditors.PictureEdit();
-            this.labelControl23 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl24 = new DevExpress.XtraEditors.LabelControl();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.pictureEdit8 = new DevExpress.XtraEditors.PictureEdit();
-            this.labelControl25 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl26 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPhoneNumber.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCustomerLastName.Properties)).BeginInit();
@@ -99,15 +83,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtCustomerFirstName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAddress.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtStatus.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTaxNumber.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTaxOffice.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBank.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grcCustomerList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvwCustomers)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtBank.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTaxOffice.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTaxNumber.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtStatus.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAddress.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit2.Properties)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             this.panel2.SuspendLayout();
@@ -116,59 +100,55 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit3.Properties)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit4.Properties)).BeginInit();
-            this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit5.Properties)).BeginInit();
-            this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit6.Properties)).BeginInit();
-            this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit7.Properties)).BeginInit();
-            this.panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit8.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // bntRefresh
             // 
             this.bntRefresh.Appearance.Font = new System.Drawing.Font("Romantic", 12F, System.Drawing.FontStyle.Bold);
             this.bntRefresh.Appearance.Options.UseFont = true;
-            this.bntRefresh.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("bntProductListRefresh.ImageOptions.Image")));
+            this.bntRefresh.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("bntRefresh.ImageOptions.Image")));
             this.bntRefresh.Location = new System.Drawing.Point(36, 489);
             this.bntRefresh.Name = "bntRefresh";
             this.bntRefresh.Size = new System.Drawing.Size(293, 39);
             this.bntRefresh.TabIndex = 16;
             this.bntRefresh.Text = "REFRESH LIST";
+            this.bntRefresh.Click += new System.EventHandler(this.bntRefresh_Click);
             // 
             // btnUpdate
             // 
             this.btnUpdate.Appearance.Font = new System.Drawing.Font("Romantic", 12F, System.Drawing.FontStyle.Bold);
             this.btnUpdate.Appearance.Options.UseFont = true;
-            this.btnUpdate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnProductUpdate.ImageOptions.Image")));
+            this.btnUpdate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdate.ImageOptions.Image")));
             this.btnUpdate.Location = new System.Drawing.Point(36, 444);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(293, 39);
             this.btnUpdate.TabIndex = 15;
             this.btnUpdate.Text = "UPDATE";
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnDelete
             // 
             this.btnDelete.Appearance.Font = new System.Drawing.Font("Romantic", 12F, System.Drawing.FontStyle.Bold);
             this.btnDelete.Appearance.Options.UseFont = true;
-            this.btnDelete.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnProductDelete.ImageOptions.Image")));
+            this.btnDelete.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.ImageOptions.Image")));
             this.btnDelete.Location = new System.Drawing.Point(37, 399);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(292, 39);
             this.btnDelete.TabIndex = 14;
             this.btnDelete.Text = "DELETE";
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnSave
             // 
             this.btnSave.Appearance.Font = new System.Drawing.Font("Romantic", 12F, System.Drawing.FontStyle.Bold);
             this.btnSave.Appearance.Options.UseFont = true;
-            this.btnSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnProductSave.ImageOptions.Image")));
+            this.btnSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.ImageOptions.Image")));
             this.btnSave.Location = new System.Drawing.Point(36, 354);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(293, 39);
             this.btnSave.TabIndex = 13;
             this.btnSave.Text = "SAVE";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // labelControl5
             // 
@@ -205,8 +185,8 @@
             // 
             this.txtPhoneNumber.Location = new System.Drawing.Point(135, 108);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
-            this.txtPhoneNumber.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegExpMaskManager));
-            this.txtPhoneNumber.Properties.MaskSettings.Set("mask", "(\\(\\d\\d\\d\\) )?\\d{1,3}-\\d\\d-\\d\\d");
+            this.txtPhoneNumber.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.SimpleMaskManager));
+            this.txtPhoneNumber.Properties.MaskSettings.Set("mask", "(000) 000-0000");
             this.txtPhoneNumber.Size = new System.Drawing.Size(194, 20);
             this.txtPhoneNumber.TabIndex = 4;
             // 
@@ -295,12 +275,113 @@
             this.groupControl1.TabIndex = 9;
             this.groupControl1.Text = "CUSTOMER OPERATIONS";
             // 
+            // lookUpEdit2
+            // 
+            this.lookUpEdit2.Location = new System.Drawing.Point(239, 168);
+            this.lookUpEdit2.Name = "lookUpEdit2";
+            this.lookUpEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lookUpEdit2.Size = new System.Drawing.Size(90, 20);
+            this.lookUpEdit2.TabIndex = 7;
+            // 
+            // lookUpEdit1
+            // 
+            this.lookUpEdit1.Location = new System.Drawing.Point(79, 168);
+            this.lookUpEdit1.Name = "lookUpEdit1";
+            this.lookUpEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lookUpEdit1.Size = new System.Drawing.Size(90, 20);
+            this.lookUpEdit1.TabIndex = 6;
+            // 
+            // labelControl12
+            // 
+            this.labelControl12.Location = new System.Drawing.Point(79, 321);
+            this.labelControl12.Name = "labelControl12";
+            this.labelControl12.Size = new System.Drawing.Size(53, 13);
+            this.labelControl12.TabIndex = 8;
+            this.labelControl12.Text = "ADDRESS :";
+            // 
+            // labelControl11
+            // 
+            this.labelControl11.Location = new System.Drawing.Point(87, 291);
+            this.labelControl11.Name = "labelControl11";
+            this.labelControl11.Size = new System.Drawing.Size(45, 13);
+            this.labelControl11.TabIndex = 8;
+            this.labelControl11.Text = "STATUS :";
+            // 
+            // labelControl10
+            // 
+            this.labelControl10.Location = new System.Drawing.Point(59, 261);
+            this.labelControl10.Name = "labelControl10";
+            this.labelControl10.Size = new System.Drawing.Size(73, 13);
+            this.labelControl10.TabIndex = 8;
+            this.labelControl10.Text = "TAX NUMBER : ";
+            // 
+            // labelControl9
+            // 
+            this.labelControl9.Location = new System.Drawing.Point(63, 231);
+            this.labelControl9.Name = "labelControl9";
+            this.labelControl9.Size = new System.Drawing.Size(69, 13);
+            this.labelControl9.TabIndex = 8;
+            this.labelControl9.Text = "TAX OFFICE : ";
+            // 
+            // labelControl8
+            // 
+            this.labelControl8.Location = new System.Drawing.Point(96, 201);
+            this.labelControl8.Name = "labelControl8";
+            this.labelControl8.Size = new System.Drawing.Size(36, 13);
+            this.labelControl8.TabIndex = 8;
+            this.labelControl8.Text = "BANK : ";
+            // 
+            // txtAddress
+            // 
+            this.txtAddress.Location = new System.Drawing.Point(135, 318);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(194, 20);
+            this.txtAddress.TabIndex = 12;
+            // 
+            // txtStatus
+            // 
+            this.txtStatus.Location = new System.Drawing.Point(135, 288);
+            this.txtStatus.Name = "txtStatus";
+            this.txtStatus.Size = new System.Drawing.Size(194, 20);
+            this.txtStatus.TabIndex = 11;
+            // 
+            // labelControl6
+            // 
+            this.labelControl6.Location = new System.Drawing.Point(181, 171);
+            this.labelControl6.Name = "labelControl6";
+            this.labelControl6.Size = new System.Drawing.Size(57, 13);
+            this.labelControl6.TabIndex = 8;
+            this.labelControl6.Text = "DISTRICT : ";
+            // 
+            // txtTaxNumber
+            // 
+            this.txtTaxNumber.Location = new System.Drawing.Point(135, 258);
+            this.txtTaxNumber.Name = "txtTaxNumber";
+            this.txtTaxNumber.Size = new System.Drawing.Size(194, 20);
+            this.txtTaxNumber.TabIndex = 10;
+            // 
+            // txtTaxOffice
+            // 
+            this.txtTaxOffice.Location = new System.Drawing.Point(135, 228);
+            this.txtTaxOffice.Name = "txtTaxOffice";
+            this.txtTaxOffice.Size = new System.Drawing.Size(194, 20);
+            this.txtTaxOffice.TabIndex = 9;
+            // 
+            // txtBank
+            // 
+            this.txtBank.Location = new System.Drawing.Point(135, 198);
+            this.txtBank.Name = "txtBank";
+            this.txtBank.Size = new System.Drawing.Size(194, 20);
+            this.txtBank.TabIndex = 8;
+            // 
             // grcCustomerList
             // 
-            this.grcCustomerList.Location = new System.Drawing.Point(1, 234);
+            this.grcCustomerList.Location = new System.Drawing.Point(1, 108);
             this.grcCustomerList.MainView = this.gvwCustomers;
             this.grcCustomerList.Name = "grcCustomerList";
-            this.grcCustomerList.Size = new System.Drawing.Size(1018, 304);
+            this.grcCustomerList.Size = new System.Drawing.Size(1018, 430);
             this.grcCustomerList.TabIndex = 8;
             this.grcCustomerList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvwCustomers});
@@ -314,111 +395,11 @@
             this.gvwCustomers.GridControl = this.grcCustomerList;
             this.gvwCustomers.Name = "gvwCustomers";
             this.gvwCustomers.OptionsView.ShowGroupPanel = false;
-            // 
-            // labelControl6
-            // 
-            this.labelControl6.Location = new System.Drawing.Point(181, 171);
-            this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(57, 13);
-            this.labelControl6.TabIndex = 8;
-            this.labelControl6.Text = "DISTRICT : ";
-            // 
-            // txtBank
-            // 
-            this.txtBank.Location = new System.Drawing.Point(135, 198);
-            this.txtBank.Name = "txtBank";
-            this.txtBank.Size = new System.Drawing.Size(194, 20);
-            this.txtBank.TabIndex = 8;
-            // 
-            // labelControl8
-            // 
-            this.labelControl8.Location = new System.Drawing.Point(96, 201);
-            this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(36, 13);
-            this.labelControl8.TabIndex = 8;
-            this.labelControl8.Text = "BANK : ";
-            // 
-            // txtTaxOffice
-            // 
-            this.txtTaxOffice.Location = new System.Drawing.Point(135, 228);
-            this.txtTaxOffice.Name = "txtTaxOffice";
-            this.txtTaxOffice.Size = new System.Drawing.Size(194, 20);
-            this.txtTaxOffice.TabIndex = 9;
-            // 
-            // labelControl9
-            // 
-            this.labelControl9.Location = new System.Drawing.Point(63, 231);
-            this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(69, 13);
-            this.labelControl9.TabIndex = 8;
-            this.labelControl9.Text = "TAX OFFICE : ";
-            // 
-            // txtTaxNumber
-            // 
-            this.txtTaxNumber.Location = new System.Drawing.Point(135, 258);
-            this.txtTaxNumber.Name = "txtTaxNumber";
-            this.txtTaxNumber.Size = new System.Drawing.Size(194, 20);
-            this.txtTaxNumber.TabIndex = 10;
-            // 
-            // labelControl10
-            // 
-            this.labelControl10.Location = new System.Drawing.Point(59, 261);
-            this.labelControl10.Name = "labelControl10";
-            this.labelControl10.Size = new System.Drawing.Size(73, 13);
-            this.labelControl10.TabIndex = 8;
-            this.labelControl10.Text = "TAX NUMBER : ";
-            // 
-            // txtStatus
-            // 
-            this.txtStatus.Location = new System.Drawing.Point(135, 288);
-            this.txtStatus.Name = "txtStatus";
-            this.txtStatus.Size = new System.Drawing.Size(194, 20);
-            this.txtStatus.TabIndex = 11;
-            // 
-            // labelControl11
-            // 
-            this.labelControl11.Location = new System.Drawing.Point(87, 291);
-            this.labelControl11.Name = "labelControl11";
-            this.labelControl11.Size = new System.Drawing.Size(45, 13);
-            this.labelControl11.TabIndex = 8;
-            this.labelControl11.Text = "STATUS :";
-            // 
-            // txtAddress
-            // 
-            this.txtAddress.Location = new System.Drawing.Point(135, 318);
-            this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(194, 20);
-            this.txtAddress.TabIndex = 12;
-            // 
-            // labelControl12
-            // 
-            this.labelControl12.Location = new System.Drawing.Point(79, 321);
-            this.labelControl12.Name = "labelControl12";
-            this.labelControl12.Size = new System.Drawing.Size(53, 13);
-            this.labelControl12.TabIndex = 8;
-            this.labelControl12.Text = "ADDRESS :";
-            // 
-            // lookUpEdit1
-            // 
-            this.lookUpEdit1.Location = new System.Drawing.Point(79, 168);
-            this.lookUpEdit1.Name = "lookUpEdit1";
-            this.lookUpEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookUpEdit1.Size = new System.Drawing.Size(90, 20);
-            this.lookUpEdit1.TabIndex = 6;
-            // 
-            // lookUpEdit2
-            // 
-            this.lookUpEdit2.Location = new System.Drawing.Point(239, 168);
-            this.lookUpEdit2.Name = "lookUpEdit2";
-            this.lookUpEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lookUpEdit2.Size = new System.Drawing.Size(90, 20);
-            this.lookUpEdit2.TabIndex = 7;
+            this.gvwCustomers.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gvwCustomers_FocusedRowChanged);
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(178)))), ((int)(((byte)(0)))));
             this.panel1.Controls.Add(this.pictureEdit1);
             this.panel1.Controls.Add(this.lblTotalProductStat);
             this.panel1.Controls.Add(this.lblTotalProductLabel);
@@ -461,15 +442,15 @@
             this.lblTotalProductLabel.Appearance.ForeColor = System.Drawing.Color.White;
             this.lblTotalProductLabel.Appearance.Options.UseFont = true;
             this.lblTotalProductLabel.Appearance.Options.UseForeColor = true;
-            this.lblTotalProductLabel.Location = new System.Drawing.Point(79, 12);
+            this.lblTotalProductLabel.Location = new System.Drawing.Point(70, 12);
             this.lblTotalProductLabel.Name = "lblTotalProductLabel";
-            this.lblTotalProductLabel.Size = new System.Drawing.Size(95, 20);
+            this.lblTotalProductLabel.Size = new System.Drawing.Size(107, 20);
             this.lblTotalProductLabel.TabIndex = 0;
-            this.lblTotalProductLabel.Text = "Total Products";
+            this.lblTotalProductLabel.Text = "Total Customers";
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(130)))), ((int)(((byte)(37)))));
             this.panel2.Controls.Add(this.pictureEdit2);
             this.panel2.Controls.Add(this.labelControl13);
             this.panel2.Controls.Add(this.labelControl14);
@@ -512,15 +493,15 @@
             this.labelControl14.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl14.Appearance.Options.UseFont = true;
             this.labelControl14.Appearance.Options.UseForeColor = true;
-            this.labelControl14.Location = new System.Drawing.Point(79, 12);
+            this.labelControl14.Location = new System.Drawing.Point(47, 12);
             this.labelControl14.Name = "labelControl14";
-            this.labelControl14.Size = new System.Drawing.Size(95, 20);
+            this.labelControl14.Size = new System.Drawing.Size(152, 20);
             this.labelControl14.TabIndex = 0;
-            this.labelControl14.Text = "Total Products";
+            this.labelControl14.Text = "Total Active Customers";
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(0)))), ((int)(((byte)(58)))));
             this.panel3.Controls.Add(this.pictureEdit3);
             this.panel3.Controls.Add(this.labelControl15);
             this.panel3.Controls.Add(this.labelControl16);
@@ -563,15 +544,15 @@
             this.labelControl16.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl16.Appearance.Options.UseFont = true;
             this.labelControl16.Appearance.Options.UseForeColor = true;
-            this.labelControl16.Location = new System.Drawing.Point(79, 12);
+            this.labelControl16.Location = new System.Drawing.Point(38, 12);
             this.labelControl16.Name = "labelControl16";
-            this.labelControl16.Size = new System.Drawing.Size(95, 20);
+            this.labelControl16.Size = new System.Drawing.Size(170, 20);
             this.labelControl16.TabIndex = 0;
-            this.labelControl16.Text = "Total Products";
+            this.labelControl16.Text = "Total Cities for Customers";
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(0)))), ((int)(((byte)(113)))));
             this.panel4.Controls.Add(this.pictureEdit4);
             this.panel4.Controls.Add(this.labelControl17);
             this.panel4.Controls.Add(this.labelControl18);
@@ -614,215 +595,11 @@
             this.labelControl18.Appearance.ForeColor = System.Drawing.Color.White;
             this.labelControl18.Appearance.Options.UseFont = true;
             this.labelControl18.Appearance.Options.UseForeColor = true;
-            this.labelControl18.Location = new System.Drawing.Point(79, 12);
+            this.labelControl18.Location = new System.Drawing.Point(48, 12);
             this.labelControl18.Name = "labelControl18";
-            this.labelControl18.Size = new System.Drawing.Size(95, 20);
+            this.labelControl18.Size = new System.Drawing.Size(151, 20);
             this.labelControl18.TabIndex = 0;
-            this.labelControl18.Text = "Total Products";
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
-            this.panel5.Controls.Add(this.pictureEdit5);
-            this.panel5.Controls.Add(this.labelControl19);
-            this.panel5.Controls.Add(this.labelControl20);
-            this.panel5.Location = new System.Drawing.Point(5, 114);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(250, 98);
-            this.panel5.TabIndex = 11;
-            // 
-            // pictureEdit5
-            // 
-            this.pictureEdit5.EditValue = ((object)(resources.GetObject("pictureEdit5.EditValue")));
-            this.pictureEdit5.Location = new System.Drawing.Point(193, 41);
-            this.pictureEdit5.Name = "pictureEdit5";
-            this.pictureEdit5.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.pictureEdit5.Properties.Appearance.Options.UseBackColor = true;
-            this.pictureEdit5.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.pictureEdit5.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit5.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.pictureEdit5.Size = new System.Drawing.Size(50, 50);
-            this.pictureEdit5.TabIndex = 2;
-            // 
-            // labelControl19
-            // 
-            this.labelControl19.Appearance.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl19.Appearance.ForeColor = System.Drawing.Color.White;
-            this.labelControl19.Appearance.Options.UseFont = true;
-            this.labelControl19.Appearance.Options.UseForeColor = true;
-            this.labelControl19.Appearance.Options.UseTextOptions = true;
-            this.labelControl19.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.labelControl19.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.labelControl19.Location = new System.Drawing.Point(12, 42);
-            this.labelControl19.Name = "labelControl19";
-            this.labelControl19.Size = new System.Drawing.Size(54, 45);
-            this.labelControl19.TabIndex = 0;
-            this.labelControl19.Text = "588";
-            // 
-            // labelControl20
-            // 
-            this.labelControl20.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl20.Appearance.ForeColor = System.Drawing.Color.White;
-            this.labelControl20.Appearance.Options.UseFont = true;
-            this.labelControl20.Appearance.Options.UseForeColor = true;
-            this.labelControl20.Location = new System.Drawing.Point(79, 12);
-            this.labelControl20.Name = "labelControl20";
-            this.labelControl20.Size = new System.Drawing.Size(95, 20);
-            this.labelControl20.TabIndex = 0;
-            this.labelControl20.Text = "Total Products";
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
-            this.panel6.Controls.Add(this.pictureEdit6);
-            this.panel6.Controls.Add(this.labelControl21);
-            this.panel6.Controls.Add(this.labelControl22);
-            this.panel6.Location = new System.Drawing.Point(261, 114);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(250, 98);
-            this.panel6.TabIndex = 11;
-            // 
-            // pictureEdit6
-            // 
-            this.pictureEdit6.EditValue = ((object)(resources.GetObject("pictureEdit6.EditValue")));
-            this.pictureEdit6.Location = new System.Drawing.Point(193, 41);
-            this.pictureEdit6.Name = "pictureEdit6";
-            this.pictureEdit6.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.pictureEdit6.Properties.Appearance.Options.UseBackColor = true;
-            this.pictureEdit6.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.pictureEdit6.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit6.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.pictureEdit6.Size = new System.Drawing.Size(50, 50);
-            this.pictureEdit6.TabIndex = 2;
-            // 
-            // labelControl21
-            // 
-            this.labelControl21.Appearance.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl21.Appearance.ForeColor = System.Drawing.Color.White;
-            this.labelControl21.Appearance.Options.UseFont = true;
-            this.labelControl21.Appearance.Options.UseForeColor = true;
-            this.labelControl21.Appearance.Options.UseTextOptions = true;
-            this.labelControl21.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.labelControl21.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.labelControl21.Location = new System.Drawing.Point(12, 42);
-            this.labelControl21.Name = "labelControl21";
-            this.labelControl21.Size = new System.Drawing.Size(54, 45);
-            this.labelControl21.TabIndex = 0;
-            this.labelControl21.Text = "588";
-            // 
-            // labelControl22
-            // 
-            this.labelControl22.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl22.Appearance.ForeColor = System.Drawing.Color.White;
-            this.labelControl22.Appearance.Options.UseFont = true;
-            this.labelControl22.Appearance.Options.UseForeColor = true;
-            this.labelControl22.Location = new System.Drawing.Point(79, 12);
-            this.labelControl22.Name = "labelControl22";
-            this.labelControl22.Size = new System.Drawing.Size(95, 20);
-            this.labelControl22.TabIndex = 0;
-            this.labelControl22.Text = "Total Products";
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
-            this.panel7.Controls.Add(this.pictureEdit7);
-            this.panel7.Controls.Add(this.labelControl23);
-            this.panel7.Controls.Add(this.labelControl24);
-            this.panel7.Location = new System.Drawing.Point(517, 114);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(250, 98);
-            this.panel7.TabIndex = 11;
-            // 
-            // pictureEdit7
-            // 
-            this.pictureEdit7.EditValue = ((object)(resources.GetObject("pictureEdit7.EditValue")));
-            this.pictureEdit7.Location = new System.Drawing.Point(193, 41);
-            this.pictureEdit7.Name = "pictureEdit7";
-            this.pictureEdit7.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.pictureEdit7.Properties.Appearance.Options.UseBackColor = true;
-            this.pictureEdit7.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.pictureEdit7.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit7.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.pictureEdit7.Size = new System.Drawing.Size(50, 50);
-            this.pictureEdit7.TabIndex = 2;
-            // 
-            // labelControl23
-            // 
-            this.labelControl23.Appearance.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl23.Appearance.ForeColor = System.Drawing.Color.White;
-            this.labelControl23.Appearance.Options.UseFont = true;
-            this.labelControl23.Appearance.Options.UseForeColor = true;
-            this.labelControl23.Appearance.Options.UseTextOptions = true;
-            this.labelControl23.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.labelControl23.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.labelControl23.Location = new System.Drawing.Point(12, 42);
-            this.labelControl23.Name = "labelControl23";
-            this.labelControl23.Size = new System.Drawing.Size(54, 45);
-            this.labelControl23.TabIndex = 0;
-            this.labelControl23.Text = "588";
-            // 
-            // labelControl24
-            // 
-            this.labelControl24.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl24.Appearance.ForeColor = System.Drawing.Color.White;
-            this.labelControl24.Appearance.Options.UseFont = true;
-            this.labelControl24.Appearance.Options.UseForeColor = true;
-            this.labelControl24.Location = new System.Drawing.Point(79, 12);
-            this.labelControl24.Name = "labelControl24";
-            this.labelControl24.Size = new System.Drawing.Size(95, 20);
-            this.labelControl24.TabIndex = 0;
-            this.labelControl24.Text = "Total Products";
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
-            this.panel8.Controls.Add(this.pictureEdit8);
-            this.panel8.Controls.Add(this.labelControl25);
-            this.panel8.Controls.Add(this.labelControl26);
-            this.panel8.Location = new System.Drawing.Point(773, 114);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(250, 98);
-            this.panel8.TabIndex = 11;
-            // 
-            // pictureEdit8
-            // 
-            this.pictureEdit8.EditValue = ((object)(resources.GetObject("pictureEdit8.EditValue")));
-            this.pictureEdit8.Location = new System.Drawing.Point(193, 41);
-            this.pictureEdit8.Name = "pictureEdit8";
-            this.pictureEdit8.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.pictureEdit8.Properties.Appearance.Options.UseBackColor = true;
-            this.pictureEdit8.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.pictureEdit8.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit8.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.pictureEdit8.Size = new System.Drawing.Size(50, 50);
-            this.pictureEdit8.TabIndex = 2;
-            // 
-            // labelControl25
-            // 
-            this.labelControl25.Appearance.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl25.Appearance.ForeColor = System.Drawing.Color.White;
-            this.labelControl25.Appearance.Options.UseFont = true;
-            this.labelControl25.Appearance.Options.UseForeColor = true;
-            this.labelControl25.Appearance.Options.UseTextOptions = true;
-            this.labelControl25.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.labelControl25.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.labelControl25.Location = new System.Drawing.Point(12, 42);
-            this.labelControl25.Name = "labelControl25";
-            this.labelControl25.Size = new System.Drawing.Size(54, 45);
-            this.labelControl25.TabIndex = 0;
-            this.labelControl25.Text = "588";
-            // 
-            // labelControl26
-            // 
-            this.labelControl26.Appearance.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl26.Appearance.ForeColor = System.Drawing.Color.White;
-            this.labelControl26.Appearance.Options.UseFont = true;
-            this.labelControl26.Appearance.Options.UseForeColor = true;
-            this.labelControl26.Location = new System.Drawing.Point(79, 12);
-            this.labelControl26.Name = "labelControl26";
-            this.labelControl26.Size = new System.Drawing.Size(95, 20);
-            this.labelControl26.TabIndex = 0;
-            this.labelControl26.Text = "Total Products";
+            this.labelControl18.Text = "Most Customers in City";
             // 
             // FrmCustomerList
             // 
@@ -830,18 +607,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(1370, 541);
-            this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.grcCustomerList);
             this.Name = "FrmCustomerList";
             this.Text = "Customer List";
+            this.Load += new System.EventHandler(this.FrmCustomerList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPhoneNumber.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCustomerLastName.Properties)).EndInit();
@@ -850,15 +624,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAddress.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtStatus.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTaxNumber.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTaxOffice.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtBank.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grcCustomerList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvwCustomers)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtBank.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTaxOffice.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTaxNumber.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtStatus.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAddress.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit2.Properties)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
@@ -871,18 +645,6 @@
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit4.Properties)).EndInit();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit5.Properties)).EndInit();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit6.Properties)).EndInit();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit7.Properties)).EndInit();
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit8.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -936,21 +698,5 @@
         private DevExpress.XtraEditors.PictureEdit pictureEdit4;
         private DevExpress.XtraEditors.LabelControl labelControl17;
         private DevExpress.XtraEditors.LabelControl labelControl18;
-        private System.Windows.Forms.Panel panel5;
-        private DevExpress.XtraEditors.PictureEdit pictureEdit5;
-        private DevExpress.XtraEditors.LabelControl labelControl19;
-        private DevExpress.XtraEditors.LabelControl labelControl20;
-        private System.Windows.Forms.Panel panel6;
-        private DevExpress.XtraEditors.PictureEdit pictureEdit6;
-        private DevExpress.XtraEditors.LabelControl labelControl21;
-        private DevExpress.XtraEditors.LabelControl labelControl22;
-        private System.Windows.Forms.Panel panel7;
-        private DevExpress.XtraEditors.PictureEdit pictureEdit7;
-        private DevExpress.XtraEditors.LabelControl labelControl23;
-        private DevExpress.XtraEditors.LabelControl labelControl24;
-        private System.Windows.Forms.Panel panel8;
-        private DevExpress.XtraEditors.PictureEdit pictureEdit8;
-        private DevExpress.XtraEditors.LabelControl labelControl25;
-        private DevExpress.XtraEditors.LabelControl labelControl26;
     }
 }

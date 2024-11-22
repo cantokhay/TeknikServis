@@ -14,7 +14,7 @@ namespace TeknikServis
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            SeedDataGenerator.Seed(25, 100).Wait();
+            SeedDataGenerator.Seed(25).Wait();
             Application.Run(new Form1());
         }
 
@@ -22,51 +22,76 @@ namespace TeknikServis
         {
             static List<Category> categories = new List<Category>();
             static List<Product> products = new List<Product>();
+            static List<Customer> customers = new List<Customer>();
             static List<string> brands = new List<string>();
 
-            public static async Task Seed(int maxCategoryCount, int maxCustomerCount)
+            public static async Task Seed(int maxCategoryCount)
             {
-                using (var db = new TeknikServisDBEntities())
+                using (var db = new TeknikServisDBEntitiesLaptop())
                 {
                     db.Database.Initialize(false);
 
                     if (!db.Category.Any())
                     {
+                        GenerateCustomers(10);
                         GenerateBrands(25);
                         GenerateCategoriesAndProducts(maxCategoryCount);
                         await db.SaveChangesAsync();
                     }
 
-                    if (!db.Customer.Any())
+                    string EnsureMaxLength(string value, int maxLength)
                     {
-                        GenerateCustomers(maxCustomerCount);
-                        await db.SaveChangesAsync();
+                        if (string.IsNullOrEmpty(value)) return value;
+                        return value.Length <= maxLength ? value : value.Substring(0, maxLength);
                     }
 
-                    void GenerateCustomers(int customerCount)
+                    void GenerateCustomers(int customerPerBank)
                     {
                         var faker = new Faker();
 
+                        var cityDistrictMap = new Dictionary<string, List<string>>
+                        {
+                            { "Istanbul", new List<string> { "Kadikoy", "Besiktas", "Sisli", "Uskudar", "Maltepe" } },
+                            { "Ankara", new List<string> { "Cankaya", "Keçiören", "Mamak", "Yenimahalle", "Altındağ" } },
+                            { "Izmir", new List<string> { "Bornova", "Karşıyaka", "Buca", "Balçova", "Konak" } },
+                            { "Bursa", new List<string> { "Altıparmak", "Nilüfer", "Osmangazi", "Yıldırım", "Görükle" } },
+                            { "Antalya", new List<string> { "Muratpaşa", "Konyaaltı", "Kepez", "Aksu", "Döşemealtı" } },
+                            { "Adana", new List<string> { "Seyhan", "Çukurova", "Yüreğir", "Sarıçam", "Ceyhan" } },
+                            { "Gaziantep", new List<string> { "Şahinbey", "Şehitkamil", "Oğuzeli", "Araban", "Karkamış" } },
+                            { "Konya", new List<string> { "Selçuklu", "Karatay", "Meram", "Beyşehir", "Ereğli" } },
+                            { "Diyarbakir", new List<string> { "Bağlar", "Kayapınar", "Sur", "Yenişehir", "Bismil" } },
+                            { "Eskisehir", new List<string> { "Odunpazarı", "Tepebaşı", "Çifteler", "Sivrihisar", "Alpu" } }
+                        };
+
                         var bankNames = new[] { "Akbank", "Yapı Kredi", "Garanti", "Ziraat", "Vakıfbank", "Halkbank", "TEB", "ING", "Şekerbank", "QNB Finansbank" };
 
-                        for (int i = 0; i < maxCustomerCount; i++)
+                        foreach (var bank in bankNames)
                         {
-                            var customer = new Customer
+                            for (int i = 0; i < customerPerBank; i++)
                             {
-                                CustomerFirstName = faker.Name.FirstName(),
-                                CustomerLastName = faker.Name.LastName(),
-                                CustomerPhoneNumber = faker.Phone.PhoneNumber(),
-                                CustomerEmail = faker.Internet.Email(),
-                                CustomerAddress = faker.Address.FullAddress(),
-                                CustomerCity = faker.Address.City(),
-                                CustomerDistrict = faker.Address.County(),
-                                CustomerTaxNumber = faker.Random.Number(100000000, 999999999).ToString(),
-                                CustomerTaxOffice = faker.Company.CompanyName(),
-                                CustomerStatus = faker.Random.Bool().ToString(),
-                                CustomerBank = faker.PickRandom(bankNames)
-                            };
-                            db.Customer.Add(customer);
+                                var pickedCity = faker.PickRandom(cityDistrictMap.Keys.ToList());
+                                var pickedDistrict = faker.PickRandom(cityDistrictMap[pickedCity]);
+
+                                var customer = new Customer
+                                {
+                                    CustomerFirstName = EnsureMaxLength(faker.Name.FirstName(), 50),
+                                    CustomerLastName = EnsureMaxLength(faker.Name.LastName(), 50),
+                                    CustomerPhoneNumber = EnsureMaxLength(faker.Phone.PhoneNumber(), 20),
+                                    CustomerEmail = EnsureMaxLength(faker.Internet.Email(), 50),
+                                    CustomerAddress = EnsureMaxLength(faker.Address.FullAddress(), 250),
+                                    CustomerCity = EnsureMaxLength(pickedCity, 50),
+                                    CustomerDistrict = EnsureMaxLength(pickedDistrict, 50),
+                                    CustomerTaxNumber = faker.Random.Number(100000000, 999999999).ToString(),
+                                    CustomerTaxOffice = EnsureMaxLength(faker.Company.CompanyName(), 50),
+                                    CustomerStatus = faker.Random.Bool().ToString(),
+                                    CustomerBank = EnsureMaxLength(bank, 50)
+                                };
+
+                                customers.Add(customer);
+                                db.Customer.Add(customer);
+                            }
                         }
+                        db.SaveChanges();
                     }
 
                     void GenerateBrands(int brandCount)
@@ -119,7 +144,6 @@ namespace TeknikServis
                             { "Art", new[] { "Paint", "Canvas", "Brush", "Easel", "Sketchbook" } }
                         };
 
-                        // Generate categories
                         foreach (var categoryName in categoryProducts.Keys.Take(categoryCount))
                         {
                             var category = new Category
@@ -130,25 +154,24 @@ namespace TeknikServis
                             db.Category.Add(category);
                         }
 
-                        db.SaveChanges(); // Save categories first
+                        db.SaveChanges();
 
-                        // Generate products for each category
                         foreach (var category in categories)
                         {
                             var productsForCategory = categoryProducts[category.CategoryName];
-                            int productCount = faker.Random.Number(1, 5); // Randomize product count (1-5 per category)
+                            int productCount = faker.Random.Number(1, 5);
 
                             for (int i = 0; i < productCount; i++)
                             {
                                 var product = new Product
                                 {
                                     ProductName = faker.PickRandom(productsForCategory),
-                                    ProductBrand = faker.PickRandom(brands), // Use a random brand from the 25 brands
-                                    ProductPurchasePrice = decimal.Parse(faker.Commerce.Price(100, 1000)), // Prices between 100-1000
-                                    ProductSalePrice = decimal.Parse(faker.Commerce.Price(1000, 2000)), // Prices between 1000-2000
-                                    Stock = (short)faker.Random.Number(1, 100), // Stock between 1-100
+                                    ProductBrand = faker.PickRandom(brands),
+                                    ProductPurchasePrice = decimal.Parse(faker.Commerce.Price(100, 1000)),
+                                    ProductSalePrice = decimal.Parse(faker.Commerce.Price(1000, 2000)),
+                                    Stock = (short)faker.Random.Number(1, 100),
                                     ProductStatus = faker.Random.Bool(),
-                                    Category = category.CategoryId // Associate with the correct category
+                                    Category = category.CategoryId
                                 };
                                 products.Add(product);
                                 db.Product.Add(product);
@@ -157,8 +180,6 @@ namespace TeknikServis
                     }
                 }
             }
-
-
         }
     }
 }

@@ -19,7 +19,7 @@ namespace TeknikServis
         public string FaultProblem { get; set; }
         public string FaultDescription { get; set; }
         public Nullable<decimal> FaultPrePrice { get; set; }
-        public Nullable<decimal> FaultNetPrice { get; set; }
+        public Nullable<decimal> FaultFinishPrice { get; set; }
         public string FaultOperation { get; set; }
     }
 }

@@ -74,28 +74,28 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Action.cs">
-      <DependentUpon>TeknikServis.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Admin.cs">
-      <DependentUpon>TeknikServis.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Category.cs">
-      <DependentUpon>TeknikServis.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Customer.cs">
-      <DependentUpon>TeknikServis.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Departmant.cs">
-      <DependentUpon>TeknikServis.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Employee.cs">
-      <DependentUpon>TeknikServis.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Expense.cs">
-      <DependentUpon>TeknikServis.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="FaultDetail.cs">
-      <DependentUpon>TeknikServis.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -114,6 +114,12 @@
     </Compile>
     <Compile Include="Forms\FrmCategoryList.Designer.cs">
       <DependentUpon>FrmCategoryList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmCustomerCityStats.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmCustomerCityStats.Designer.cs">
+      <DependentUpon>FrmCustomerCityStats.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmCustomerList.cs">
       <SubType>Form</SubType>
@@ -140,42 +146,42 @@
       <DependentUpon>FrmProductStats.cs</DependentUpon>
     </Compile>
     <Compile Include="Invoice.cs">
-      <DependentUpon>TeknikServis.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="InvoiceDetail.cs">
-      <DependentUpon>TeknikServis.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
     <Compile Include="Note.cs">
-      <DependentUpon>TeknikServis.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Product.cs">
-      <DependentUpon>TeknikServis.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="ProductTrace.cs">
-      <DependentUpon>TeknikServis.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sale.cs">
-      <DependentUpon>TeknikServis.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="sysdiagrams.cs">
-      <DependentUpon>TeknikServis.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TeknikServis.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TeknikServis.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TeknikServis.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TeknikServis.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TeknikServisModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>TeknikServisModel.edmx</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -185,6 +191,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmCategoryList.resx">
       <DependentUpon>FrmCategoryList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmCustomerCityStats.resx">
+      <DependentUpon>FrmCustomerCityStats.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmCustomerList.resx">
       <DependentUpon>FrmCustomerList.cs</DependentUpon>
@@ -208,6 +217,13 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EntityDeploy Include="Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -218,13 +234,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EntityDeploy Include="TeknikServisModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>TeknikServisModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="TeknikServisModel.edmx.diagram">
-      <DependentUpon>TeknikServisModel.edmx</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -249,15 +258,15 @@
     <Content Include="Images\Share.png" />
     <Content Include="Images\Toolbox.png" />
     <Content Include="Images\Trash Can.png" />
-    <Content Include="TeknikServis.Context.tt">
+    <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>TeknikServis.Context.cs</LastGenOutput>
-      <DependentUpon>TeknikServisModel.edmx</DependentUpon>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="TeknikServis.tt">
+    <Content Include="Model1.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>TeknikServisModel.edmx</DependentUpon>
-      <LastGenOutput>TeknikServis.cs</LastGenOutput>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>

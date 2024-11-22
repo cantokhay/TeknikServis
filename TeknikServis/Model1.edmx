@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="TeknikServisDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="TeknikServisDBModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Action">
           <Key>
             <PropertyRef Name="ActionId" />
@@ -54,7 +54,7 @@
           </Key>
           <Property Name="DepartmantId" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="DepartmantName" Type="nvarchar" MaxLength="50" />
-          <Property Name="DepartmantDescription" Type="nvarchar" MaxLength="100" />
+          <Property Name="DepartmentDescription" Type="nvarchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="Employee">
           <Key>
@@ -81,12 +81,12 @@
           <Key>
             <PropertyRef Name="FaultId" />
           </Key>
-          <Property Name="FaultId" Type="int" Nullable="false" />
+          <Property Name="FaultId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Action" Type="int" />
           <Property Name="FaultProblem" Type="nvarchar" MaxLength="250" />
           <Property Name="FaultDescription" Type="nvarchar" MaxLength="250" />
           <Property Name="FaultPrePrice" Type="decimal" Precision="18" Scale="2" />
-          <Property Name="FaultNetPrice" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="FaultFinishPrice" Type="decimal" Precision="18" Scale="2" />
           <Property Name="FaultOperation" Type="nvarchar" MaxLength="500" />
         </EntityType>
         <EntityType Name="Invoice">
@@ -141,7 +141,7 @@
           </Key>
           <Property Name="ProductTraceId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Product" Type="int" />
-          <Property Name="ProductConditon" Type="nvarchar" MaxLength="250" />
+          <Property Name="ProductCondition" Type="nvarchar" MaxLength="250" />
           <Property Name="ProductTraceDate" Type="int" />
           <Property Name="ProductTraceCode" Type="char" MaxLength="5" />
         </EntityType>
@@ -311,7 +311,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="TeknikServisDBModelStoreContainer">
+        <EntityContainer Name="TeknikServisDBModel1StoreContainer">
           <EntitySet Name="Action" EntityType="Self.Action" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Admin" EntityType="Self.Admin" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
@@ -380,7 +380,7 @@
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="TeknikServisDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="TeknikServisDBModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="Action">
           <Key>
             <PropertyRef Name="ActionId" />
@@ -437,7 +437,7 @@
           </Key>
           <Property Name="DepartmantId" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="DepartmantName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="DepartmantDescription" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="DepartmentDescription" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Employee" Relationship="Self.FK_Employee_Departmant" FromRole="Departmant" ToRole="Employee" />
         </EntityType>
         <EntityType Name="Employee">
@@ -469,12 +469,12 @@
           <Key>
             <PropertyRef Name="FaultId" />
           </Key>
-          <Property Name="FaultId" Type="Int32" Nullable="false" />
+          <Property Name="FaultId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Action" Type="Int32" />
           <Property Name="FaultProblem" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
           <Property Name="FaultDescription" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
           <Property Name="FaultPrePrice" Type="Decimal" Precision="18" Scale="2" />
-          <Property Name="FaultNetPrice" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="FaultFinishPrice" Type="Decimal" Precision="18" Scale="2" />
           <Property Name="FaultOperation" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Invoice">
@@ -537,7 +537,7 @@
           </Key>
           <Property Name="ProductTraceId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Product" Type="Int32" />
-          <Property Name="ProductConditon" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="ProductCondition" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
           <Property Name="ProductTraceDate" Type="Int32" />
           <Property Name="ProductTraceCode" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
           <NavigationProperty Name="Product1" Relationship="Self.FK_ProductTrace_Product" FromRole="ProductTrace" ToRole="Product" />
@@ -711,7 +711,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="TeknikServisDBEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="TeknikServisDBEntitiesLaptop" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Action" EntityType="Self.Action" />
           <EntitySet Name="Admin" EntityType="Self.Admin" />
           <EntitySet Name="Category" EntityType="Self.Category" />
@@ -781,9 +781,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="TeknikServisDBModelStoreContainer" CdmEntityContainer="TeknikServisDBEntities">
+        <EntityContainerMapping StorageEntityContainer="TeknikServisDBModel1StoreContainer" CdmEntityContainer="TeknikServisDBEntitiesLaptop">
           <EntitySetMapping Name="Action">
-            <EntityTypeMapping TypeName="TeknikServisDBModel.Action">
+            <EntityTypeMapping TypeName="TeknikServisDBModel1.Action">
               <MappingFragment StoreEntitySet="Action">
                 <ScalarProperty Name="ActionId" ColumnName="ActionId" />
                 <ScalarProperty Name="Product" ColumnName="Product" />
@@ -795,7 +795,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Admin">
-            <EntityTypeMapping TypeName="TeknikServisDBModel.Admin">
+            <EntityTypeMapping TypeName="TeknikServisDBModel1.Admin">
               <MappingFragment StoreEntitySet="Admin">
                 <ScalarProperty Name="AdminId" ColumnName="AdminId" />
                 <ScalarProperty Name="AdminUsername" ColumnName="AdminUsername" />
@@ -804,7 +804,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Category">
-            <EntityTypeMapping TypeName="TeknikServisDBModel.Category">
+            <EntityTypeMapping TypeName="TeknikServisDBModel1.Category">
               <MappingFragment StoreEntitySet="Category">
                 <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
                 <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
@@ -812,7 +812,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Customer">
-            <EntityTypeMapping TypeName="TeknikServisDBModel.Customer">
+            <EntityTypeMapping TypeName="TeknikServisDBModel1.Customer">
               <MappingFragment StoreEntitySet="Customer">
                 <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
                 <ScalarProperty Name="CustomerFirstName" ColumnName="CustomerFirstName" />
@@ -830,16 +830,16 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Departmant">
-            <EntityTypeMapping TypeName="TeknikServisDBModel.Departmant">
+            <EntityTypeMapping TypeName="TeknikServisDBModel1.Departmant">
               <MappingFragment StoreEntitySet="Departmant">
                 <ScalarProperty Name="DepartmantId" ColumnName="DepartmantId" />
                 <ScalarProperty Name="DepartmantName" ColumnName="DepartmantName" />
-                <ScalarProperty Name="DepartmantDescription" ColumnName="DepartmantDescription" />
+                <ScalarProperty Name="DepartmentDescription" ColumnName="DepartmentDescription" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Employee">
-            <EntityTypeMapping TypeName="TeknikServisDBModel.Employee">
+            <EntityTypeMapping TypeName="TeknikServisDBModel1.Employee">
               <MappingFragment StoreEntitySet="Employee">
                 <ScalarProperty Name="EmployeeId" ColumnName="EmployeeId" />
                 <ScalarProperty Name="EmployeeFirstName" ColumnName="EmployeeFirstName" />
@@ -852,7 +852,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Expense">
-            <EntityTypeMapping TypeName="TeknikServisDBModel.Expense">
+            <EntityTypeMapping TypeName="TeknikServisDBModel1.Expense">
               <MappingFragment StoreEntitySet="Expense">
                 <ScalarProperty Name="ExpenseId" ColumnName="ExpenseId" />
                 <ScalarProperty Name="ExpenseDescription" ColumnName="ExpenseDescription" />
@@ -862,20 +862,20 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="FaultDetail">
-            <EntityTypeMapping TypeName="TeknikServisDBModel.FaultDetail">
+            <EntityTypeMapping TypeName="TeknikServisDBModel1.FaultDetail">
               <MappingFragment StoreEntitySet="FaultDetail">
                 <ScalarProperty Name="FaultId" ColumnName="FaultId" />
                 <ScalarProperty Name="Action" ColumnName="Action" />
                 <ScalarProperty Name="FaultProblem" ColumnName="FaultProblem" />
                 <ScalarProperty Name="FaultDescription" ColumnName="FaultDescription" />
                 <ScalarProperty Name="FaultPrePrice" ColumnName="FaultPrePrice" />
-                <ScalarProperty Name="FaultNetPrice" ColumnName="FaultNetPrice" />
+                <ScalarProperty Name="FaultFinishPrice" ColumnName="FaultFinishPrice" />
                 <ScalarProperty Name="FaultOperation" ColumnName="FaultOperation" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Invoice">
-            <EntityTypeMapping TypeName="TeknikServisDBModel.Invoice">
+            <EntityTypeMapping TypeName="TeknikServisDBModel1.Invoice">
               <MappingFragment StoreEntitySet="Invoice">
                 <ScalarProperty Name="InvoiceId" ColumnName="InvoiceId" />
                 <ScalarProperty Name="InvoiceSerialCharacter" ColumnName="InvoiceSerialCharacter" />
@@ -889,7 +889,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="InvoiceDetail">
-            <EntityTypeMapping TypeName="TeknikServisDBModel.InvoiceDetail">
+            <EntityTypeMapping TypeName="TeknikServisDBModel1.InvoiceDetail">
               <MappingFragment StoreEntitySet="InvoiceDetail">
                 <ScalarProperty Name="InvoiceDetailId" ColumnName="InvoiceDetailId" />
                 <ScalarProperty Name="ProductName" ColumnName="ProductName" />
@@ -901,7 +901,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Note">
-            <EntityTypeMapping TypeName="TeknikServisDBModel.Note">
+            <EntityTypeMapping TypeName="TeknikServisDBModel1.Note">
               <MappingFragment StoreEntitySet="Note">
                 <ScalarProperty Name="NoteId" ColumnName="NoteId" />
                 <ScalarProperty Name="NoteTitle" ColumnName="NoteTitle" />
@@ -911,7 +911,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Product">
-            <EntityTypeMapping TypeName="TeknikServisDBModel.Product">
+            <EntityTypeMapping TypeName="TeknikServisDBModel1.Product">
               <MappingFragment StoreEntitySet="Product">
                 <ScalarProperty Name="ProductId" ColumnName="ProductId" />
                 <ScalarProperty Name="ProductName" ColumnName="ProductName" />
@@ -925,18 +925,18 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="ProductTrace">
-            <EntityTypeMapping TypeName="TeknikServisDBModel.ProductTrace">
+            <EntityTypeMapping TypeName="TeknikServisDBModel1.ProductTrace">
               <MappingFragment StoreEntitySet="ProductTrace">
                 <ScalarProperty Name="ProductTraceId" ColumnName="ProductTraceId" />
                 <ScalarProperty Name="Product" ColumnName="Product" />
-                <ScalarProperty Name="ProductConditon" ColumnName="ProductConditon" />
+                <ScalarProperty Name="ProductCondition" ColumnName="ProductCondition" />
                 <ScalarProperty Name="ProductTraceDate" ColumnName="ProductTraceDate" />
                 <ScalarProperty Name="ProductTraceCode" ColumnName="ProductTraceCode" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Sale">
-            <EntityTypeMapping TypeName="TeknikServisDBModel.Sale">
+            <EntityTypeMapping TypeName="TeknikServisDBModel1.Sale">
               <MappingFragment StoreEntitySet="Sale">
                 <ScalarProperty Name="SaleId" ColumnName="SaleId" />
                 <ScalarProperty Name="Product" ColumnName="Product" />
@@ -949,7 +949,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="sysdiagrams">
-            <EntityTypeMapping TypeName="TeknikServisDBModel.sysdiagrams">
+            <EntityTypeMapping TypeName="TeknikServisDBModel1.sysdiagrams">
               <MappingFragment StoreEntitySet="sysdiagrams">
                 <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="principal_id" ColumnName="principal_id" />
