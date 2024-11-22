@@ -43,7 +43,7 @@
             this.barButtonItem10 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem11 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem12 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
+            this.btnCustomerList = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem13 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem14 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem15 = new DevExpress.XtraBars.BarButtonItem();
@@ -119,7 +119,7 @@
             this.barButtonItem10,
             this.barButtonItem11,
             this.barButtonItem12,
-            this.barButtonItem3,
+            this.btnCustomerList,
             this.barButtonItem13,
             this.barButtonItem14,
             this.barButtonItem15,
@@ -211,7 +211,7 @@
             // 
             this.btnBrandStats.Caption = "Brand Stats";
             this.btnBrandStats.Id = 7;
-            this.btnBrandStats.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem7.ImageOptions.LargeImage")));
+            this.btnBrandStats.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnBrandStats.ImageOptions.LargeImage")));
             this.btnBrandStats.Name = "btnBrandStats";
             this.btnBrandStats.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnBrandStats_ItemClick);
             // 
@@ -250,12 +250,13 @@
             this.barButtonItem12.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem12.ImageOptions.LargeImage")));
             this.barButtonItem12.Name = "barButtonItem12";
             // 
-            // barButtonItem3
+            // btnCustomerList
             // 
-            this.barButtonItem3.Caption = "Customer List";
-            this.barButtonItem3.Id = 13;
-            this.barButtonItem3.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.LargeImage")));
-            this.barButtonItem3.Name = "barButtonItem3";
+            this.btnCustomerList.Caption = "Customer List";
+            this.btnCustomerList.Id = 13;
+            this.btnCustomerList.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.LargeImage")));
+            this.btnCustomerList.Name = "btnCustomerList";
+            this.btnCustomerList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCustomerList_ItemClick);
             // 
             // barButtonItem13
             // 
@@ -508,7 +509,7 @@
             // 
             // ribbonPageGroup3
             // 
-            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem3);
+            this.ribbonPageGroup3.ItemLinks.Add(this.btnCustomerList);
             this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem13);
             this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem14);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
@@ -694,7 +695,7 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem12;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup13;
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem3;
+        private DevExpress.XtraBars.BarButtonItem btnCustomerList;
         private DevExpress.XtraBars.BarButtonItem barButtonItem13;
         private DevExpress.XtraBars.BarButtonItem barButtonItem14;
         private DevExpress.XtraBars.BarButtonItem barButtonItem15;

@@ -14,7 +14,7 @@ namespace TeknikServis
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            SeedDataGenerator.Seed(25).Wait();
+            SeedDataGenerator.Seed(25, 100).Wait();
             Application.Run(new Form1());
         }
 
@@ -24,7 +24,7 @@ namespace TeknikServis
             static List<Product> products = new List<Product>();
             static List<string> brands = new List<string>();
 
-            public static async Task Seed(int maxCategoryCount)
+            public static async Task Seed(int maxCategoryCount, int maxCustomerCount)
             {
                 using (var db = new TeknikServisDBEntities())
                 {
@@ -37,6 +37,38 @@ namespace TeknikServis
                         await db.SaveChangesAsync();
                     }
 
+                    if (!db.Customer.Any())
+                    {
+                        GenerateCustomers(maxCustomerCount);
+                        await db.SaveChangesAsync();
+                    }
+
+                    void GenerateCustomers(int customerCount)
+                    {
+                        var faker = new Faker();
+
+                        var bankNames = new[] { "Akbank", "Yapı Kredi", "Garanti", "Ziraat", "Vakıfbank", "Halkbank", "TEB", "ING", "Şekerbank", "QNB Finansbank" };
+
+                        for (int i = 0; i < maxCustomerCount; i++)
+                        {
+                            var customer = new Customer
+                            {
+                                CustomerFirstName = faker.Name.FirstName(),
+                                CustomerLastName = faker.Name.LastName(),
+                                CustomerPhoneNumber = faker.Phone.PhoneNumber(),
+                                CustomerEmail = faker.Internet.Email(),
+                                CustomerAddress = faker.Address.FullAddress(),
+                                CustomerCity = faker.Address.City(),
+                                CustomerDistrict = faker.Address.County(),
+                                CustomerTaxNumber = faker.Random.Number(100000000, 999999999).ToString(),
+                                CustomerTaxOffice = faker.Company.CompanyName(),
+                                CustomerStatus = faker.Random.Bool().ToString(),
+                                CustomerBank = faker.PickRandom(bankNames)
+                            };
+                            db.Customer.Add(customer);
+                        }
+                    }
+
                     void GenerateBrands(int brandCount)
                     {
                         var faker = new Faker();
@@ -44,7 +76,7 @@ namespace TeknikServis
                         for (int i = 0; i < brandCount; i++)
                         {
                             var brand = faker.Company.CompanyName();
-                            if (brand.Length > 25) brand = brand.Substring(0, 25); // Ensure brand names are <= 25 chars
+                            if (brand.Length > 25) brand = brand.Substring(0, 25);
                             while (brands.Contains(brand))
                             {
                                 brand = faker.Company.CompanyName();
@@ -58,7 +90,6 @@ namespace TeknikServis
                     {
                         var faker = new Faker();
 
-                        // Define realistic product names by category
                         var categoryProducts = new Dictionary<string, string[]>
                         {
                             { "Computer", new[] { "Laptop", "Desktop", "Gaming PC", "Workstation", "Server" } },
@@ -126,6 +157,8 @@ namespace TeknikServis
                     }
                 }
             }
+
+
         }
     }
 }
