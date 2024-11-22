@@ -25,7 +25,7 @@ namespace TeknikServis.Forms
 
         private void btnNewProductSave_Click(object sender, EventArgs e)
         {
-            TeknikServisDBEntities db = new TeknikServisDBEntities();
+            TeknikServisDBEntitiesLaptop db = new TeknikServisDBEntitiesLaptop();
             Product product = new Product();
             AssignProductInfo(product);
             product.ProductStatus = false;
@@ -49,7 +49,7 @@ namespace TeknikServis.Forms
 
         private void FillLookUpEditCategories()
         {
-            TeknikServisDBEntities db = new TeknikServisDBEntities();
+            TeknikServisDBEntitiesLaptop db = new TeknikServisDBEntitiesLaptop();
             var categoriesList = from c in db.Category
                                  select new
                                  {

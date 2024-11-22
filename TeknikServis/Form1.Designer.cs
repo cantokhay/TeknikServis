@@ -254,7 +254,7 @@
             // 
             this.btnCustomerList.Caption = "Customer List";
             this.btnCustomerList.Id = 13;
-            this.btnCustomerList.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.LargeImage")));
+            this.btnCustomerList.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnCustomerList.ImageOptions.LargeImage")));
             this.btnCustomerList.Name = "btnCustomerList";
             this.btnCustomerList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCustomerList_ItemClick);
             // 
@@ -271,6 +271,7 @@
             this.barButtonItem14.Id = 15;
             this.barButtonItem14.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem14.ImageOptions.LargeImage")));
             this.barButtonItem14.Name = "barButtonItem14";
+            this.barButtonItem14.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem14_ItemClick);
             // 
             // barButtonItem15
             // 

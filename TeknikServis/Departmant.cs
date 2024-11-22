@@ -22,7 +22,7 @@ namespace TeknikServis
     
         public byte DepartmantId { get; set; }
         public string DepartmantName { get; set; }
-        public string DepartmantDescription { get; set; }
+        public string DepartmentDescription { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Employee> Employee { get; set; }

@@ -16,7 +16,7 @@ namespace TeknikServis
     {
         public int ProductTraceId { get; set; }
         public Nullable<int> Product { get; set; }
-        public string ProductConditon { get; set; }
+        public string ProductCondition { get; set; }
         public Nullable<int> ProductTraceDate { get; set; }
         public string ProductTraceCode { get; set; }
     

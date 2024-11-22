@@ -11,7 +11,7 @@ namespace TeknikServis.Forms
             InitializeComponent();
         }
 
-        TeknikServisDBEntities db = new TeknikServisDBEntities();
+        TeknikServisDBEntitiesLaptop db = new TeknikServisDBEntitiesLaptop();
 
         private void FrmProductStats_Load(object sender, System.EventArgs e)
         {

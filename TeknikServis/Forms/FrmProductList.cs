@@ -17,7 +17,7 @@ namespace TeknikServis.Forms
             InitializeComponent();
         }
 
-        TeknikServisDBEntities db = new TeknikServisDBEntities(); //TODO: This should be come with dependency injection.
+        TeknikServisDBEntitiesLaptop db = new TeknikServisDBEntitiesLaptop(); //TODO: This should be come with dependency injection.
 
         private void FrmProductList_Load(object sender, EventArgs e)
         {

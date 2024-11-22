@@ -13,10 +13,10 @@ namespace TeknikServis
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class TeknikServisDBEntities : DbContext
+    public partial class TeknikServisDBEntitiesLaptop : DbContext
     {
-        public TeknikServisDBEntities()
-            : base("name=TeknikServisDBEntities")
+        public TeknikServisDBEntitiesLaptop()
+            : base("name=TeknikServisDBEntitiesLaptop")
         {
         }
     
