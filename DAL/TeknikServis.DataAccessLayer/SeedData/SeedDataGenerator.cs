@@ -128,7 +128,6 @@ namespace TeknikServis.DataAccessLayer.SeedData
                 {
                     var faker = new Faker();
 
-                    // Marka isimleri
                     var productBrands = new[]
                     {
                         "Apple", "Samsung", "Sony", "LG Electronics", "Microsoft", "Dell", "Lenovo", "HP", "Asus", "Acer",
@@ -136,7 +135,6 @@ namespace TeknikServis.DataAccessLayer.SeedData
                         "Xiaomi", "Huawei", "Toshiba", "Nokia", "Casio", "Temu", "Canon"
                     };
 
-                    // Kategori ve ürün ilişkisi
                     var categoryProducts = new Dictionary<string, string[]>
                     {
                         { "Computer", new[] { "Laptop", "Desktop", "Gaming PC", "Workstation", "Server" } },
@@ -166,11 +164,9 @@ namespace TeknikServis.DataAccessLayer.SeedData
                         { "Art", new[] { "Paint", "Canvas", "Brush", "Easel", "Sketchbook" } }
                     };
 
-                    // Veritabanında var olan kategoriler
                     var existingCategories = db.Categories.Select(c => c.CategoryName).ToList();
                     var remainingCategories = categoryProducts.Keys.Except(existingCategories).ToList();
 
-                    // Eksik kategorileri tamamlama
                     int missingCategories = Math.Max(categoryCountToGenerate, 0);
 
                     foreach (var categoryName in remainingCategories.Take(missingCategories))
@@ -180,39 +176,35 @@ namespace TeknikServis.DataAccessLayer.SeedData
                             CategoryName = EnsureMaxLength(categoryName, 50)
                         };
                         db.Categories.Add(category);
-                    }
+                        db.SaveChanges();
 
-                    db.SaveChanges();
-
-                    // Ürün ekleme işlemi
-                    foreach (var category in db.Categories.ToList())
-                    {
-                        if (!categoryProducts.ContainsKey(category.CategoryName)) continue;
-
-                        var productsForCategory = categoryProducts[category.CategoryName];
-
-                        // Her kategoriye rastgele miktarda ürün ekleme
-                        int productCount = faker.Random.Number(3, 7);
-
-                        for (int i = 0; i < productCount; i++)
+                        if (categoryProducts.ContainsKey(categoryName))
                         {
-                            var product = new Product
-                            {
-                                ProductName = faker.PickRandom(productsForCategory),
-                                ProductBrand = faker.PickRandom(productBrands),
-                                ProductPurchasePrice = decimal.Parse(faker.Commerce.Price(100, 1000)),
-                                ProductSalePrice = decimal.Parse(faker.Commerce.Price(1000, 2000)),
-                                Stock = (short)faker.Random.Number(1, 100),
-                                ProductStatus = faker.Random.Bool(),
-                                Category = category.CategoryId
-                            };
+                            var productsForCategory = categoryProducts[categoryName];
 
-                            db.Products.Add(product);
+                            int productCount = faker.Random.Number(3, 7);
+
+                            for (int i = 0; i < productCount; i++)
+                            {
+                                var product = new Product
+                                {
+                                    ProductName = faker.PickRandom(productsForCategory),
+                                    ProductBrand = faker.PickRandom(productBrands),
+                                    ProductPurchasePrice = decimal.Parse(faker.Commerce.Price(100, 1000)),
+                                    ProductSalePrice = decimal.Parse(faker.Commerce.Price(1000, 2000)),
+                                    Stock = (short)faker.Random.Number(1, 100),
+                                    ProductStatus = faker.Random.Bool(),
+                                    Category = category.CategoryId
+                                };
+
+                                db.Products.Add(product);
+                            }
                         }
                     }
 
                     db.SaveChanges();
                 }
+
 
                 string EnsureMaxLength(string value, int maxLength)
                 {

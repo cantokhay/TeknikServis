@@ -16,8 +16,9 @@ namespace TeknikServis.Forms
 
         TeknikServisContext db = new TeknikServisContext();
 
-        SqlConnection connection = new SqlConnection(@"Data Source=CAN-TOKHAY-MASA\CANTOKHAY;Initial Catalog=TeknikServisDB;Integrated Security=True");
-        
+        //SqlConnection connection = new SqlConnection(@"Data Source=CAN-TOKHAY-MASA\CANTOKHAY;Initial Catalog=TeknikServisDB;Integrated Security=True");
+        SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-OHO9G30\SQLEXPRESS;Initial Catalog=TeknikServisDB;Integrated Security=True");
+
         private void FrmCustomerCityStats_Load(object sender, EventArgs e)
         {
             grcCustomerCityList.DataSource = db.Customers.OrderBy(x => x.CustomerCity).GroupBy(y => y.CustomerCity).Select(z => new
