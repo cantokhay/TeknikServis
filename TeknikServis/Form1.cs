@@ -50,17 +50,36 @@ namespace TeknikServis
             frmCustomerList.Show();
         }
 
-        private void barButtonItem14_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void btnNewCustomer_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.FrmNewCustomer frmNewCustomer = new Forms.FrmNewCustomer();
+            frmNewCustomer.Show();
+        }
+
+        private void btnCustomerCityStats_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Forms.FrmCustomerCityStats frmCustomerCityStats = new Forms.FrmCustomerCityStats();
             frmCustomerCityStats.MdiParent = this;
             frmCustomerCityStats.Show();
         }
 
-        private void btnNewCustomer_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void btnDepartmentList_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Forms.FrmNewCustomer frmNewCustomer = new Forms.FrmNewCustomer();
-            frmNewCustomer.Show();
+            Forms.FrmDepartmentList frmDepartmentList = new Forms.FrmDepartmentList();
+            frmDepartmentList.MdiParent = this;
+            frmDepartmentList.Show();
+        }
+
+        private void btnNewDepartment_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.FrmNewDepartment frmNewDepartment = new Forms.FrmNewDepartment();
+            frmNewDepartment.Show();
+        }
+
+        private void btnNewCategory_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.FrmNewCategory frmNewCategory = new Forms.FrmNewCategory();
+            frmNewCategory.Show();
         }
     }
 }

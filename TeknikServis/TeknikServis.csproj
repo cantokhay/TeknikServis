@@ -103,11 +103,29 @@
     <Compile Include="Forms\FrmCustomerList.Designer.cs">
       <DependentUpon>FrmCustomerList.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FrmDepartmentList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmDepartmentList.Designer.cs">
+      <DependentUpon>FrmDepartmentList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmNewCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmNewCategory.Designer.cs">
+      <DependentUpon>FrmNewCategory.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmNewCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FrmNewCustomer.Designer.cs">
       <DependentUpon>FrmNewCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmNewDepartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmNewDepartment.Designer.cs">
+      <DependentUpon>FrmNewDepartment.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmNewProduct.cs">
       <SubType>Form</SubType>
@@ -144,8 +162,17 @@
     <EmbeddedResource Include="Forms\FrmCustomerList.resx">
       <DependentUpon>FrmCustomerList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmDepartmentList.resx">
+      <DependentUpon>FrmDepartmentList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmNewCategory.resx">
+      <DependentUpon>FrmNewCategory.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmNewCustomer.resx">
       <DependentUpon>FrmNewCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmNewDepartment.resx">
+      <DependentUpon>FrmNewDepartment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmNewProduct.resx">
       <DependentUpon>FrmNewProduct.cs</DependentUpon>

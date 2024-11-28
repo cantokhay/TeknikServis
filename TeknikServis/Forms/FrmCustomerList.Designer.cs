@@ -576,16 +576,16 @@
             // 
             // lblMostCustomerByCityStat
             // 
-            this.lblMostCustomerByCityStat.Appearance.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblMostCustomerByCityStat.Appearance.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblMostCustomerByCityStat.Appearance.ForeColor = System.Drawing.Color.White;
             this.lblMostCustomerByCityStat.Appearance.Options.UseFont = true;
             this.lblMostCustomerByCityStat.Appearance.Options.UseForeColor = true;
             this.lblMostCustomerByCityStat.Appearance.Options.UseTextOptions = true;
             this.lblMostCustomerByCityStat.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.lblMostCustomerByCityStat.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.lblMostCustomerByCityStat.Location = new System.Drawing.Point(12, 42);
+            this.lblMostCustomerByCityStat.Location = new System.Drawing.Point(8, 50);
             this.lblMostCustomerByCityStat.Name = "lblMostCustomerByCityStat";
-            this.lblMostCustomerByCityStat.Size = new System.Drawing.Size(96, 45);
+            this.lblMostCustomerByCityStat.Size = new System.Drawing.Size(75, 32);
             this.lblMostCustomerByCityStat.TabIndex = 0;
             this.lblMostCustomerByCityStat.Text = "588???";
             // 

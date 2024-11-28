@@ -28,7 +28,7 @@ namespace TeknikServis.Forms
             product.ProductStatus = false;
             db.Products.Add(product);
             db.SaveChanges();
-            MessageBox.Show("Product Added Successfully");
+            MessageBox.Show("Product added successfully");
             this.Close();
         }
 

@@ -93,7 +93,7 @@
             this.bntRefresh.Appearance.Font = new System.Drawing.Font("Romantic", 12F, System.Drawing.FontStyle.Bold);
             this.bntRefresh.Appearance.Options.UseFont = true;
             this.bntRefresh.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("bntRefresh.ImageOptions.Image")));
-            this.bntRefresh.Location = new System.Drawing.Point(34, 253);
+            this.bntRefresh.Location = new System.Drawing.Point(34, 489);
             this.bntRefresh.Name = "bntRefresh";
             this.bntRefresh.Size = new System.Drawing.Size(293, 39);
             this.bntRefresh.TabIndex = 9;
@@ -105,7 +105,7 @@
             this.btnUpdate.Appearance.Font = new System.Drawing.Font("Romantic", 12F, System.Drawing.FontStyle.Bold);
             this.btnUpdate.Appearance.Options.UseFont = true;
             this.btnUpdate.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdate.ImageOptions.Image")));
-            this.btnUpdate.Location = new System.Drawing.Point(34, 208);
+            this.btnUpdate.Location = new System.Drawing.Point(34, 444);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(293, 39);
             this.btnUpdate.TabIndex = 9;
@@ -117,7 +117,7 @@
             this.btnDelete.Appearance.Font = new System.Drawing.Font("Romantic", 12F, System.Drawing.FontStyle.Bold);
             this.btnDelete.Appearance.Options.UseFont = true;
             this.btnDelete.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.ImageOptions.Image")));
-            this.btnDelete.Location = new System.Drawing.Point(35, 163);
+            this.btnDelete.Location = new System.Drawing.Point(34, 399);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(292, 39);
             this.btnDelete.TabIndex = 8;
@@ -129,7 +129,7 @@
             this.btnSave.Appearance.Font = new System.Drawing.Font("Romantic", 12F, System.Drawing.FontStyle.Bold);
             this.btnSave.Appearance.Options.UseFont = true;
             this.btnSave.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.ImageOptions.Image")));
-            this.btnSave.Location = new System.Drawing.Point(34, 118);
+            this.btnSave.Location = new System.Drawing.Point(34, 354);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(293, 39);
             this.btnSave.TabIndex = 7;
@@ -139,7 +139,7 @@
             // labelControl7
             // 
             this.labelControl7.Enabled = false;
-            this.labelControl7.Location = new System.Drawing.Point(46, 55);
+            this.labelControl7.Location = new System.Drawing.Point(46, 204);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(78, 13);
             this.labelControl7.TabIndex = 8;
@@ -147,7 +147,7 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(29, 81);
+            this.labelControl1.Location = new System.Drawing.Point(29, 230);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(95, 13);
             this.labelControl1.TabIndex = 8;
@@ -156,14 +156,14 @@
             // txtCategoryId
             // 
             this.txtCategoryId.Enabled = false;
-            this.txtCategoryId.Location = new System.Drawing.Point(126, 52);
+            this.txtCategoryId.Location = new System.Drawing.Point(126, 201);
             this.txtCategoryId.Name = "txtCategoryId";
             this.txtCategoryId.Size = new System.Drawing.Size(194, 20);
             this.txtCategoryId.TabIndex = 1;
             // 
             // txtCategoryName
             // 
-            this.txtCategoryName.Location = new System.Drawing.Point(126, 78);
+            this.txtCategoryName.Location = new System.Drawing.Point(126, 227);
             this.txtCategoryName.Name = "txtCategoryName";
             this.txtCategoryName.Size = new System.Drawing.Size(194, 20);
             this.txtCategoryName.TabIndex = 1;

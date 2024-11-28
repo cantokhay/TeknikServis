@@ -27,7 +27,7 @@ namespace TeknikServis.Forms
             AssignCustomerInfo(customer);
             db.Customers.Add(customer);
             db.SaveChanges();
-            MessageBox.Show("Customer Added Successfully");
+            MessageBox.Show("Customer added successfully");
             this.Close();
         }
 
