@@ -81,5 +81,81 @@ namespace TeknikServis
             Forms.FrmNewCategory frmNewCategory = new Forms.FrmNewCategory();
             frmNewCategory.Show();
         }
+
+        private void btnEmployeeList_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.FrmEmployeeList frmEmployeeList = new Forms.FrmEmployeeList();
+            frmEmployeeList.MdiParent = this;
+            frmEmployeeList.Show();
+        }
+
+        private void btnNewEmployee_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.FrmNewEmployee frmNewEmployee = new Forms.FrmNewEmployee();
+            frmNewEmployee.Show();
+        }
+
+        private void btnCalculator_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            System.Diagnostics.Process.Start("calc.exe");
+        }
+
+        private void btnCurrency_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.FrmCurrency frmCurrency = new Forms.FrmCurrency();
+            frmCurrency.MdiParent = this;
+            frmCurrency.Show();
+        }
+
+        private void btnWord_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            System.Diagnostics.Process.Start("winword");
+        }
+
+        private void btnExcel_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            System.Diagnostics.Process.Start("excel");
+        }
+
+        private void btnYoutube_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.FrmYoutube frmYoutube = new Forms.FrmYoutube();
+            frmYoutube.MdiParent = this;
+            frmYoutube.Show();
+        }
+
+        private void btnNoteList_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.FrmNoteList frmNoteList = new Forms.FrmNoteList();
+            frmNoteList.MdiParent = this;
+            frmNoteList.Show();
+        }
+
+        private void btnFaultyProductList_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.FrmActionsList frmFaultyProductList = new Forms.FrmActionsList();
+            frmFaultyProductList.MdiParent = this;
+            frmFaultyProductList.Show();
+        }
+
+        private void btnNewSale_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.FrmNewSale frmNewSale = new Forms.FrmNewSale();
+            frmNewSale.Show();
+        }
+
+        private void btnSaleList_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.FrmSaleList frmSaleList = new Forms.FrmSaleList();
+            frmSaleList.MdiParent = this;
+            frmSaleList.Show();
+        }
+
+        private void btnCustomerMovements_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.FrmSaleList frmSaleList = new Forms.FrmSaleList();
+            frmSaleList.MdiParent = this;
+            frmSaleList.Show();
+        }
     }
 }

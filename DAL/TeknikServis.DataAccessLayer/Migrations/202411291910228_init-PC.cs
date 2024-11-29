@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class initlaptop : DbMigration
+    public partial class initPC : DbMigration
     {
         public override void Up()
         {
@@ -12,17 +12,15 @@
                 c => new
                     {
                         ActionId = c.Int(nullable: false, identity: true),
-                        Product = c.Int(nullable: false),
                         Customer = c.Int(nullable: false),
                         Employee = c.Short(nullable: false),
                         AcceptedDate = c.DateTime(nullable: false),
                         CompletedDate = c.DateTime(nullable: false),
+                        ProductSerialNumber = c.String(maxLength: 5),
                     })
                 .PrimaryKey(t => t.ActionId)
                 .ForeignKey("dbo.Customers", t => t.Customer)
                 .ForeignKey("dbo.Employees", t => t.Employee)
-                .ForeignKey("dbo.Products", t => t.Product)
-                .Index(t => t.Product)
                 .Index(t => t.Customer)
                 .Index(t => t.Employee);
             
@@ -103,6 +101,7 @@
                         SaleDate = c.DateTime(nullable: false),
                         SaleQuantity = c.Short(nullable: false),
                         SaleTotalPrice = c.Decimal(nullable: false, precision: 18, scale: 2),
+                        ProductSerialNumber = c.String(maxLength: 5),
                     })
                 .PrimaryKey(t => t.SaleId)
                 .ForeignKey("dbo.Customers", t => t.Customer)
@@ -143,15 +142,14 @@
                 c => new
                     {
                         ProductTraceId = c.Int(nullable: false, identity: true),
-                        Product = c.Int(nullable: false),
-                        ProductCondition = c.String(maxLength: 250),
-                        ProductTraceDate = c.DateTime(nullable: false),
-                        ProductTraceCode = c.String(maxLength: 5),
-                        ProductNavigation_ProductId = c.Int(),
+                        ProductTraceDate = c.DateTime(nullable: false, precision: 7, storeType: "datetime2"),
+                        ProductSerialNumber = c.String(maxLength: 5),
+                        ProductTraceInformation = c.String(maxLength: 250),
+                        Product_ProductId = c.Int(),
                     })
                 .PrimaryKey(t => t.ProductTraceId)
-                .ForeignKey("dbo.Products", t => t.ProductNavigation_ProductId)
-                .Index(t => t.ProductNavigation_ProductId);
+                .ForeignKey("dbo.Products", t => t.Product_ProductId)
+                .Index(t => t.Product_ProductId);
             
             CreateTable(
                 "dbo.InvoiceDetails",
@@ -219,12 +217,11 @@
         
         public override void Down()
         {
-            DropForeignKey("dbo.Actions", "Product", "dbo.Products");
             DropForeignKey("dbo.Actions", "Employee", "dbo.Employees");
             DropForeignKey("dbo.Actions", "Customer", "dbo.Customers");
             DropForeignKey("dbo.InvoiceDetails", "InvoiceNavigation_InvoiceId", "dbo.Invoices");
             DropForeignKey("dbo.Sales", "Product", "dbo.Products");
-            DropForeignKey("dbo.ProductTraces", "ProductNavigation_ProductId", "dbo.Products");
+            DropForeignKey("dbo.ProductTraces", "Product_ProductId", "dbo.Products");
             DropForeignKey("dbo.Products", "Category", "dbo.Categories");
             DropForeignKey("dbo.Sales", "Employee", "dbo.Employees");
             DropForeignKey("dbo.Sales", "Customer", "dbo.Customers");
@@ -232,7 +229,7 @@
             DropForeignKey("dbo.Employees", "Department", "dbo.Departments");
             DropForeignKey("dbo.Invoices", "CustomerNavigation_CustomerId", "dbo.Customers");
             DropIndex("dbo.InvoiceDetails", new[] { "InvoiceNavigation_InvoiceId" });
-            DropIndex("dbo.ProductTraces", new[] { "ProductNavigation_ProductId" });
+            DropIndex("dbo.ProductTraces", new[] { "Product_ProductId" });
             DropIndex("dbo.Products", new[] { "Category" });
             DropIndex("dbo.Sales", new[] { "Employee" });
             DropIndex("dbo.Sales", new[] { "Customer" });
@@ -242,7 +239,6 @@
             DropIndex("dbo.Invoices", new[] { "CustomerNavigation_CustomerId" });
             DropIndex("dbo.Actions", new[] { "Employee" });
             DropIndex("dbo.Actions", new[] { "Customer" });
-            DropIndex("dbo.Actions", new[] { "Product" });
             DropTable("dbo.Notes");
             DropTable("dbo.FaultDetails");
             DropTable("dbo.Expenses");

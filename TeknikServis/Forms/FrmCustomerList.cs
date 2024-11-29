@@ -36,7 +36,6 @@ namespace TeknikServis.Forms
             txtBank.Text = gvwCustomers.GetFocusedRowCellValue("CustomerBank").ToString();
             lueCustomerCity.EditValue = gvwCustomers.GetFocusedRowCellValue("CustomerCity").ToString();
             lueCustomerDistrict.EditValue = gvwCustomers.GetFocusedRowCellValue("CustomerDistrict").ToString();
-
         }
 
         private void btnSave_Click(object sender, System.EventArgs e)
@@ -68,7 +67,6 @@ namespace TeknikServis.Forms
                 AssignCustomerInfo(customer);
                 db.SaveChanges();
                 MessageBox.Show("Customer Updated", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                ClearCustomerInfo();
             }
             else
             {
@@ -120,7 +118,7 @@ namespace TeknikServis.Forms
 
         private void CustomerList()
         {
-            var customerList = db.Customers.Select(c => new
+var customerList = db.Customers.Select(c => new
             {
                 c.CustomerId,
                 c.CustomerFirstName,

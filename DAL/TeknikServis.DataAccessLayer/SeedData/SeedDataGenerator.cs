@@ -16,33 +16,49 @@ namespace TeknikServis.DataAccessLayer.SeedData
             {
                 db.Database.Initialize(false);
 
-                if (db.Customers.Count() <= 100 || db.Departments.Count() <= 10 || db.Categories.Count() <= 25)
+                byte maxCustomerCount = 100;
+                byte maxDepartmentCount = 10;
+                byte maxCategoryCount = 25;
+                byte maxNoteCount = 100;
+                short maxSaleCount = 500;
+                byte maxActionCount = 150;
+
+                if (db.Customers.Count() <= maxCustomerCount || db.Departments.Count() <= maxDepartmentCount || db.Categories.Count() <= maxCategoryCount || db.Notes.Count() <= maxNoteCount || db.Actions.Count() <= maxActionCount || db.Sales.Count() <= maxSaleCount)
                 {
-                    var customerCountToGenerate = 100 - db.Customers.Count();
-                    var departmentCountToGenerate = 10 - db.Departments.Count();
-                    var categoryCountToGenerate = 25 - db.Categories.Count();
+                    byte customerCountToGenerate = (byte)(maxCustomerCount - db.Customers.Count());
+                    byte departmentCountToGenerate = (byte)(maxDepartmentCount - db.Departments.Count());
+                    byte categoryCountToGenerate = (byte)(maxCategoryCount - db.Categories.Count());
+                    byte noteCountToGenerate = (byte)(maxNoteCount - db.Notes.Count());
+                    short saleCountToGenerate = (short)(maxSaleCount - db.Sales.Count());
+                    byte actionCountToGenerate = (byte)(maxActionCount - db.Actions.Count());
+
                     GenerateCategoriesAndProducts(categoryCountToGenerate);
                     GenerateCustomers(customerCountToGenerate);
                     GenerateDepartmentsAndEmployees(departmentCountToGenerate);
+                    GenerateNotes(noteCountToGenerate);
+
+                    var createdSales = GenerateSales(saleCountToGenerate);
+                    GenerateActions(actionCountToGenerate, createdSales);
+
                     await db.SaveChangesAsync();
                 }
 
                 #region Faker Generation Methods
 
-                void GenerateDepartmentsAndEmployees(int departmentCountToGenerate)
+                void GenerateDepartmentsAndEmployees(byte departmentCountToGenerate)
                 {
                     var faker = new Faker();
 
                     var departmentNames = new[]
                     {
-                            "IT", "HR", "Finance", "Sales", "Marketing",
-                            "Logistics", "Production", "R&D", "Customer Service", "Quality Assurance"
-                        };
+                        "IT", "HR", "Finance", "Sales", "Marketing",
+                        "Logistics", "Production", "R&D", "Customer Service", "Quality Assurance"
+                    };
 
                     var existingDepartments = db.Departments.Select(d => d.DepartmentName).ToList();
                     var remainingDepartments = departmentNames.Except(existingDepartments).ToList();
 
-                    int missingDepartments = Math.Max(departmentCountToGenerate, 0);
+                    byte missingDepartments = Math.Max(departmentCountToGenerate, (byte)0);
 
                     foreach (var departmentName in remainingDepartments.Take(missingDepartments))
                     {
@@ -55,16 +71,16 @@ namespace TeknikServis.DataAccessLayer.SeedData
                         db.Departments.Add(department);
                         db.SaveChanges();
 
-                        int employeeCount = faker.Random.Number(3, 7);
+                        byte employeeCount = (byte)faker.Random.Number(3, 7);
 
-                        for (int i = 0; i < employeeCount; i++)
+                        for (byte i = 0; i < employeeCount; i++)
                         {
                             var employee = new Employee
                             {
                                 EmployeeFirstName = EnsureMaxLength(faker.Name.FirstName(), 50),
                                 EmployeeLastName = EnsureMaxLength(faker.Name.LastName(), 50),
-                                Department = (byte)department.DepartmentId, // Departman ID'si ile ilişkilendir
-                                EmployeeProfilePhoto = faker.Internet.Avatar(),
+                                Department = (byte)department.DepartmentId,
+                                EmployeeProfilePhoto = GenerateAvatarUrl(),
                                 EmployeeMail = EnsureMaxLength(faker.Internet.Email(), 50),
                                 EmployeePhoneNumber = GeneratePhoneNumber()
                             };
@@ -76,7 +92,7 @@ namespace TeknikServis.DataAccessLayer.SeedData
                     db.SaveChanges();
                 }
 
-                void GenerateCustomers(int customerCountToGenerate)
+                void GenerateCustomers(byte customerCountToGenerate)
                 {
                     var faker = new Faker();
 
@@ -97,7 +113,7 @@ namespace TeknikServis.DataAccessLayer.SeedData
                     var bankNames = new[] { "Akbank", "Yapı Kredi", "Garanti", "Ziraat", "Vakıfbank",
                                                         "Halkbank", "TEB", "ING", "Şekerbank", "QNB Finansbank" };
 
-                    for (int i = 0; i < customerCountToGenerate; i++)
+                    for (byte i = 0; i < customerCountToGenerate; i++)
                     {
                         var pickedCity = faker.PickRandom(cityDistrictMap.Keys.ToList());
                         var pickedDistrict = faker.PickRandom(cityDistrictMap[pickedCity]);
@@ -124,7 +140,7 @@ namespace TeknikServis.DataAccessLayer.SeedData
                     db.SaveChanges();
                 }
 
-                void GenerateCategoriesAndProducts(int categoryCountToGenerate)
+                void GenerateCategoriesAndProducts(byte categoryCountToGenerate)
                 {
                     var faker = new Faker();
 
@@ -167,7 +183,7 @@ namespace TeknikServis.DataAccessLayer.SeedData
                     var existingCategories = db.Categories.Select(c => c.CategoryName).ToList();
                     var remainingCategories = categoryProducts.Keys.Except(existingCategories).ToList();
 
-                    int missingCategories = Math.Max(categoryCountToGenerate, 0);
+                    byte missingCategories = Math.Max(categoryCountToGenerate, (byte)0);
 
                     foreach (var categoryName in remainingCategories.Take(missingCategories))
                     {
@@ -182,9 +198,9 @@ namespace TeknikServis.DataAccessLayer.SeedData
                         {
                             var productsForCategory = categoryProducts[categoryName];
 
-                            int productCount = faker.Random.Number(3, 7);
+                            byte productCount = (byte)faker.Random.Number(3, 7);
 
-                            for (int i = 0; i < productCount; i++)
+                            for (byte i = 0; i < productCount; i++)
                             {
                                 var product = new Product
                                 {
@@ -205,6 +221,82 @@ namespace TeknikServis.DataAccessLayer.SeedData
                     db.SaveChanges();
                 }
 
+                void GenerateNotes(byte noteCountToGenerate)
+                {
+                    var faker = new Faker();
+                    var existingNotes = db.Notes.Select(n => n.NoteTitle).ToList();
+                    for (byte i = 0; i < noteCountToGenerate; i++)
+                    {
+                        var note = new Note
+                        {
+                            NoteTitle = EnsureMaxLength(faker.Lorem.Word(), 50),
+                            NoteDescription = EnsureMaxLength(faker.Lorem.Sentences(2, "\n"), 500),
+                            NoteStatus = faker.Random.Bool()
+                        };
+                        db.Notes.Add(note);
+                    }
+                    db.SaveChanges();
+                }
+
+                List<Sale> GenerateSales(short saleCountToGenerate)
+                {
+                    var faker = new Faker();
+                    var existingProducts = db.Products.Select(p => p.ProductId).ToList();
+                    var existingCustomers = db.Customers.Select(c => c.CustomerId).ToList();
+                    var existingEmployees = db.Employees.Select(e => e.EmployeeId).ToList();
+
+                    var sales = new List<Sale>();
+
+                    for (short i = 0; i < saleCountToGenerate; i++)
+                    {
+                        var saleDate = faker.Date.Between(DateTime.Now.AddMonths(-12), DateTime.Now.AddMonths(-2));
+                        var productSerialNumber = faker.Random.AlphaNumeric(5).ToUpper();
+
+                        var sale = new Sale
+                        {
+                            Product = faker.PickRandom(existingProducts),
+                            Customer = faker.PickRandom(existingCustomers),
+                            Employee = faker.PickRandom(existingEmployees),
+                            SaleDate = saleDate,
+                            SaleQuantity = (short)faker.Random.Number(1, 50),
+                            SaleTotalPrice = decimal.Parse(faker.Commerce.Price(100, 10000)),
+                            ProductSerialNumber = productSerialNumber
+                        };
+
+                        db.Sales.Add(sale);
+                        sales.Add(sale);
+                    }
+                    db.SaveChanges();
+
+                    return sales;
+                }
+
+                void GenerateActions(byte actionCountToGenerate, List<Sale> sales)
+                {
+                    if (actionCountToGenerate <= 0) return;
+
+                    var faker = new Faker();
+                    var existingEmployees = db.Employees.Select(e => e.EmployeeId).ToList();
+
+                    var selectedSales = sales.OrderBy(x => faker.Random.Number()).Take(actionCountToGenerate).ToList();
+
+                    foreach (var sale in selectedSales)
+                    {
+                        var action = new EntityLayer.ConcreteModels.Action
+                        {
+                            Customer = sale.Customer,
+                            Employee = faker.PickRandom(existingEmployees),
+                            AcceptedDate = sale.SaleDate.AddDays(faker.Random.Number(1, 30)),
+                            CompletedDate = sale.SaleDate.AddDays(faker.Random.Number(31, 60)),
+                            ProductSerialNumber = sale.ProductSerialNumber
+                        };
+
+                        db.Actions.Add(action);
+                    }
+                    db.SaveChanges();
+                }
+
+                #region Helper Methods
 
                 string EnsureMaxLength(string value, int maxLength)
                 {
@@ -215,17 +307,28 @@ namespace TeknikServis.DataAccessLayer.SeedData
                 string GeneratePhoneNumber()
                 {
                     var faker = new Faker();
-                    int areaCode = faker.Random.Number(100, 999);
-                    int centralOfficeCode = faker.Random.Number(100, 999);
-                    int lineNumberPart1 = faker.Random.Number(10, 99);
-                    int lineNumberPart2 = faker.Random.Number(10, 99);
+                    var areaCode = (short)faker.Random.Number(100, 999);
+                    var centralOfficeCode = (short)faker.Random.Number(100, 999);
+                    var lineNumberPart1 = (short)faker.Random.Number(10, 99);
+                    var lineNumberPart2 = (short)faker.Random.Number(10, 99);
 
                     return $"({areaCode}) {centralOfficeCode}-{lineNumberPart1}{lineNumberPart2}";
                 }
 
+                string GenerateAvatarUrl()
+                {
+                    var faker = new Faker();
+                    var avatarUrls = new[]
+                    {
+                        "https://robohash.org/" + faker.Random.Number(1, 200) + ".png",
+                    };
+
+                    return faker.PickRandom(avatarUrls); // Rastgele bir URL seç
+                }
+
                 #endregion
 
-
+                #endregion
             }
         }
     }

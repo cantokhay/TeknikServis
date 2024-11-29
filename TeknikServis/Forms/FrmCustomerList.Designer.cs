@@ -378,7 +378,7 @@
             // 
             // grcCustomerList
             // 
-            this.grcCustomerList.Location = new System.Drawing.Point(1, 108);
+            this.grcCustomerList.Location = new System.Drawing.Point(3, 108);
             this.grcCustomerList.MainView = this.gvwCustomers;
             this.grcCustomerList.Name = "grcCustomerList";
             this.grcCustomerList.Size = new System.Drawing.Size(1018, 430);
@@ -403,7 +403,7 @@
             this.panel1.Controls.Add(this.pictureEdit1);
             this.panel1.Controls.Add(this.lblTotalProductStat);
             this.panel1.Controls.Add(this.lblTotalProductLabel);
-            this.panel1.Location = new System.Drawing.Point(5, 4);
+            this.panel1.Location = new System.Drawing.Point(3, 4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(250, 98);
             this.panel1.TabIndex = 11;
@@ -454,7 +454,7 @@
             this.panel2.Controls.Add(this.pictureEdit2);
             this.panel2.Controls.Add(this.lblActiveCustomerStat);
             this.panel2.Controls.Add(this.lblActiveCustomerLabel);
-            this.panel2.Location = new System.Drawing.Point(261, 4);
+            this.panel2.Location = new System.Drawing.Point(259, 4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(250, 98);
             this.panel2.TabIndex = 11;
@@ -505,7 +505,7 @@
             this.panel3.Controls.Add(this.pictureEdit3);
             this.panel3.Controls.Add(this.lblTotalCitiesStat);
             this.panel3.Controls.Add(this.lblTotalCitiesLabel);
-            this.panel3.Location = new System.Drawing.Point(517, 4);
+            this.panel3.Location = new System.Drawing.Point(515, 4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(250, 98);
             this.panel3.TabIndex = 11;
@@ -556,7 +556,7 @@
             this.panel4.Controls.Add(this.pictureEdit4);
             this.panel4.Controls.Add(this.lblMostCustomerByCityStat);
             this.panel4.Controls.Add(this.lblMostCustomerByCityLabel);
-            this.panel4.Location = new System.Drawing.Point(773, 4);
+            this.panel4.Location = new System.Drawing.Point(771, 4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(250, 98);
             this.panel4.TabIndex = 11;

@@ -143,6 +143,10 @@ namespace TeknikServis.DataAccessLayer.Context
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Sale>()
+                .Property(a => a.ProductSerialNumber)
+                .HasMaxLength(5);
+
+            modelBuilder.Entity<Sale>()
                 .HasRequired(s => s.CustomerNavigation)
                 .WithMany(c => c.Sales)
                 .HasForeignKey(s => s.Customer)
@@ -241,16 +245,14 @@ namespace TeknikServis.DataAccessLayer.Context
                 .HasKey(a => a.ActionId);
 
             modelBuilder.Entity<Action>()
-                .HasRequired(a => a.ProductNavigation)
-                .WithMany(p => p.Actions)
-                .HasForeignKey(a => a.Product)
-                .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<Action>()
                 .HasRequired(a => a.CustomerNavigation)
                 .WithMany(c => c.Actions)
                 .HasForeignKey(a => a.Customer)
                 .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<Action>()
+                .Property(a => a.ProductSerialNumber)
+                .HasMaxLength(5);
 
             modelBuilder.Entity<Action>()
                 .HasRequired(a => a.EmployeeNavigation)
@@ -265,11 +267,15 @@ namespace TeknikServis.DataAccessLayer.Context
                 .HasKey(pt => pt.ProductTraceId);
 
             modelBuilder.Entity<ProductTrace>()
-                .Property(pt => pt.ProductCondition)
+                .Property(pt => pt.ProductTraceInformation)
                 .HasMaxLength(250);
 
             modelBuilder.Entity<ProductTrace>()
-                .Property(pt => pt.ProductTraceCode)
+                .Property(pt => pt.ProductTraceDate)
+                .HasColumnType("datetime2");
+
+            modelBuilder.Entity<ProductTrace>()
+                .Property(pt => pt.ProductSerialNumber)
                 .HasMaxLength(5);
         }
         #endregion

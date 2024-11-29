@@ -103,7 +103,7 @@
             // 
             // grcDepartmentList
             // 
-            this.grcDepartmentList.Location = new System.Drawing.Point(1, 108);
+            this.grcDepartmentList.Location = new System.Drawing.Point(3, 108);
             this.grcDepartmentList.MainView = this.gvwDepartments;
             this.grcDepartmentList.Name = "grcDepartmentList";
             this.grcDepartmentList.Size = new System.Drawing.Size(1018, 430);
@@ -117,7 +117,7 @@
             this.panel1.Controls.Add(this.pictureEdit1);
             this.panel1.Controls.Add(this.lblTotalDepartmentStat);
             this.panel1.Controls.Add(this.lblTotalDepartmentLabel);
-            this.panel1.Location = new System.Drawing.Point(5, 4);
+            this.panel1.Location = new System.Drawing.Point(3, 4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(250, 98);
             this.panel1.TabIndex = 14;
@@ -168,7 +168,7 @@
             this.panel2.Controls.Add(this.pictureEdit2);
             this.panel2.Controls.Add(this.lblTotalEmployeeStat);
             this.panel2.Controls.Add(this.lblTotalEmployeeLabel);
-            this.panel2.Location = new System.Drawing.Point(261, 4);
+            this.panel2.Location = new System.Drawing.Point(259, 4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(250, 98);
             this.panel2.TabIndex = 15;
@@ -219,7 +219,7 @@
             this.panel3.Controls.Add(this.pictureEdit3);
             this.panel3.Controls.Add(this.lblMaxEmployeeDepartmentStat);
             this.panel3.Controls.Add(this.lblMaxEmployeeDepartmentLabel);
-            this.panel3.Location = new System.Drawing.Point(517, 4);
+            this.panel3.Location = new System.Drawing.Point(515, 4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(250, 98);
             this.panel3.TabIndex = 16;
@@ -270,7 +270,7 @@
             this.panel4.Controls.Add(this.pictureEdit4);
             this.panel4.Controls.Add(this.lblMinEmployeeDepartmentStat);
             this.panel4.Controls.Add(this.lblMinEmployeeDepartmentLabel);
-            this.panel4.Location = new System.Drawing.Point(773, 4);
+            this.panel4.Location = new System.Drawing.Point(771, 4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(250, 98);
             this.panel4.TabIndex = 17;

@@ -11,6 +11,7 @@ namespace TeknikServis.EntityLayer.ConcreteModels
         public DateTime SaleDate { get; set; }
         public short SaleQuantity { get; set; }
         public decimal SaleTotalPrice { get; set; }
+        public string ProductSerialNumber { get; set; }
 
         public Product ProductNavigation { get; set; }
         public Customer CustomerNavigation { get; set; }

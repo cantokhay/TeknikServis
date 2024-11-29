@@ -55,9 +55,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Context\TeknikServisContext.cs" />
-    <Compile Include="Migrations\202411272204200_init-laptop.cs" />
-    <Compile Include="Migrations\202411272204200_init-laptop.Designer.cs">
-      <DependentUpon>202411272204200_init-laptop.cs</DependentUpon>
+    <Compile Include="Migrations\202411291910228_init-PC.cs" />
+    <Compile Include="Migrations\202411291910228_init-PC.Designer.cs">
+      <DependentUpon>202411291910228_init-PC.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -74,8 +74,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202411272204200_init-laptop.resx">
-      <DependentUpon>202411272204200_init-laptop.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202411291910228_init-PC.resx">
+      <DependentUpon>202411291910228_init-PC.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

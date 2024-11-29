@@ -40,7 +40,11 @@
     <Reference Include="DevExpress.Data.Desktop.v24.1, Version=24.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Data.v24.1, Version=24.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Drawing.v24.1, Version=24.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Images.v24.1, Version=24.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v24.1.Core, Version=24.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v24.1.Core, Version=24.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Printing.v24.1.Core, Version=24.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v24.1.Core, Version=24.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v24.1, Version=24.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v24.1.UI, Version=24.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraBars.v24.1, Version=24.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -51,6 +55,10 @@
     <Reference Include="DevExpress.XtraGrid.v24.1, Version=24.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v24.1, Version=24.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraPrinting.v24.1, Version=24.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v24.1, Version=24.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v24.1, Version=24.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v24.1.Core, Version=24.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v24.1.Core.Desktop, Version=24.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -71,6 +79,7 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Form1.cs">
@@ -91,6 +100,12 @@
     <Compile Include="Forms\FrmCategoryList.Designer.cs">
       <DependentUpon>FrmCategoryList.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FrmCurrency.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmCurrency.Designer.cs">
+      <DependentUpon>FrmCurrency.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmCustomerCityStats.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,6 +123,18 @@
     </Compile>
     <Compile Include="Forms\FrmDepartmentList.Designer.cs">
       <DependentUpon>FrmDepartmentList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmEmployeeList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmEmployeeList.Designer.cs">
+      <DependentUpon>FrmEmployeeList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmActionsList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmActionsList.Designer.cs">
+      <DependentUpon>FrmActionsList.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmNewCategory.cs">
       <SubType>Form</SubType>
@@ -127,11 +154,29 @@
     <Compile Include="Forms\FrmNewDepartment.Designer.cs">
       <DependentUpon>FrmNewDepartment.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FrmNewEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmNewEmployee.Designer.cs">
+      <DependentUpon>FrmNewEmployee.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmNewProduct.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FrmNewProduct.Designer.cs">
       <DependentUpon>FrmNewProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmNewSale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmNewSale.Designer.cs">
+      <DependentUpon>FrmNewSale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmNoteList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmNoteList.Designer.cs">
+      <DependentUpon>FrmNoteList.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmProductList.cs">
       <SubType>Form</SubType>
@@ -145,6 +190,18 @@
     <Compile Include="Forms\FrmProductStats.Designer.cs">
       <DependentUpon>FrmProductStats.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FrmSaleList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmSaleList.Designer.cs">
+      <DependentUpon>FrmSaleList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmYoutube.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmYoutube.Designer.cs">
+      <DependentUpon>FrmYoutube.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -156,6 +213,9 @@
     <EmbeddedResource Include="Forms\FrmCategoryList.resx">
       <DependentUpon>FrmCategoryList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmCurrency.resx">
+      <DependentUpon>FrmCurrency.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmCustomerCityStats.resx">
       <DependentUpon>FrmCustomerCityStats.cs</DependentUpon>
     </EmbeddedResource>
@@ -164,6 +224,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmDepartmentList.resx">
       <DependentUpon>FrmDepartmentList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmEmployeeList.resx">
+      <DependentUpon>FrmEmployeeList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmActionsList.resx">
+      <DependentUpon>FrmActionsList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmNewCategory.resx">
       <DependentUpon>FrmNewCategory.cs</DependentUpon>
@@ -174,14 +240,29 @@
     <EmbeddedResource Include="Forms\FrmNewDepartment.resx">
       <DependentUpon>FrmNewDepartment.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmNewEmployee.resx">
+      <DependentUpon>FrmNewEmployee.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmNewProduct.resx">
       <DependentUpon>FrmNewProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmNewSale.resx">
+      <DependentUpon>FrmNewSale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmNoteList.resx">
+      <DependentUpon>FrmNoteList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmProductList.resx">
       <DependentUpon>FrmProductList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmProductStats.resx">
       <DependentUpon>FrmProductStats.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmSaleList.resx">
+      <DependentUpon>FrmSaleList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmYoutube.resx">
+      <DependentUpon>FrmYoutube.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

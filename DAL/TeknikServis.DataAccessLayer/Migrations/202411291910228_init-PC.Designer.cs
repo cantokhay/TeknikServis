@@ -7,13 +7,13 @@ namespace TeknikServis.DataAccessLayer.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.5.1")]
-    public sealed partial class initlaptop : IMigrationMetadata
+    public sealed partial class initPC : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(initlaptop));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(initPC));
         
         string IMigrationMetadata.Id
         {
-            get { return "202411272204200_init-laptop"; }
+            get { return "202411291910228_init-PC"; }
         }
         
         string IMigrationMetadata.Source
