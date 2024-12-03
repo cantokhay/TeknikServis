@@ -50,12 +50,12 @@
             this.lueProducts = new DevExpress.XtraEditors.LookUpEdit();
             this.lueCustomers = new DevExpress.XtraEditors.LookUpEdit();
             this.lueEmployees = new DevExpress.XtraEditors.LookUpEdit();
-            this.dtpSaleDate = new System.Windows.Forms.DateTimePicker();
             this.numSaleQuantity = new System.Windows.Forms.NumericUpDown();
             this.pictureEdit6 = new DevExpress.XtraEditors.PictureEdit();
             this.panel6 = new System.Windows.Forms.Panel();
             this.txtProductSerialNumber = new DevExpress.XtraEditors.TextEdit();
             this.txtSalePrice = new DevExpress.XtraEditors.TextEdit();
+            this.txtSaleDate = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit8.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit7.Properties)).BeginInit();
@@ -71,6 +71,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit6.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtProductSerialNumber.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSalePrice.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSaleDate.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panel7
@@ -294,15 +295,6 @@
             this.lueEmployees.Size = new System.Drawing.Size(219, 20);
             this.lueEmployees.TabIndex = 3;
             // 
-            // dtpSaleDate
-            // 
-            this.dtpSaleDate.CalendarForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.dtpSaleDate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.dtpSaleDate.Location = new System.Drawing.Point(51, 246);
-            this.dtpSaleDate.Name = "dtpSaleDate";
-            this.dtpSaleDate.Size = new System.Drawing.Size(219, 29);
-            this.dtpSaleDate.TabIndex = 4;
-            // 
             // numSaleQuantity
             // 
             this.numSaleQuantity.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
@@ -365,16 +357,33 @@
             this.txtSalePrice.Size = new System.Drawing.Size(124, 26);
             this.txtSalePrice.TabIndex = 6;
             // 
+            // txtSaleDate
+            // 
+            this.txtSaleDate.EditValue = "Sale Date";
+            this.txtSaleDate.Location = new System.Drawing.Point(50, 246);
+            this.txtSaleDate.Name = "txtSaleDate";
+            this.txtSaleDate.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.txtSaleDate.Properties.Appearance.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtSaleDate.Properties.Appearance.ForeColor = System.Drawing.Color.White;
+            this.txtSaleDate.Properties.Appearance.Options.UseBackColor = true;
+            this.txtSaleDate.Properties.Appearance.Options.UseFont = true;
+            this.txtSaleDate.Properties.Appearance.Options.UseForeColor = true;
+            this.txtSaleDate.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.txtSaleDate.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.DateOnlyMaskManager));
+            this.txtSaleDate.Properties.MaskSettings.Set("MaskManagerSignature", "allowNull=False");
+            this.txtSaleDate.Size = new System.Drawing.Size(219, 26);
+            this.txtSaleDate.TabIndex = 4;
+            // 
             // FrmNewSale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.ClientSize = new System.Drawing.Size(287, 498);
+            this.Controls.Add(this.txtSaleDate);
             this.Controls.Add(this.txtSalePrice);
             this.Controls.Add(this.txtProductSerialNumber);
             this.Controls.Add(this.numSaleQuantity);
-            this.Controls.Add(this.dtpSaleDate);
             this.Controls.Add(this.lueEmployees);
             this.Controls.Add(this.lueCustomers);
             this.Controls.Add(this.lueProducts);
@@ -415,6 +424,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit6.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtProductSerialNumber.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSalePrice.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSaleDate.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -441,11 +451,11 @@
         private DevExpress.XtraEditors.LookUpEdit lueProducts;
         private DevExpress.XtraEditors.LookUpEdit lueCustomers;
         private DevExpress.XtraEditors.LookUpEdit lueEmployees;
-        private System.Windows.Forms.DateTimePicker dtpSaleDate;
         private System.Windows.Forms.NumericUpDown numSaleQuantity;
         private DevExpress.XtraEditors.PictureEdit pictureEdit6;
         private System.Windows.Forms.Panel panel6;
         private DevExpress.XtraEditors.TextEdit txtProductSerialNumber;
         private DevExpress.XtraEditors.TextEdit txtSalePrice;
+        private DevExpress.XtraEditors.TextEdit txtSaleDate;
     }
 }

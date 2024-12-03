@@ -160,6 +160,18 @@
     <Compile Include="Forms\FrmNewEmployee.Designer.cs">
       <DependentUpon>FrmNewEmployee.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FrmNewProductTrace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmNewProductTrace.Designer.cs">
+      <DependentUpon>FrmNewProductTrace.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmNewFaultyProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmNewFaultyProduct.Designer.cs">
+      <DependentUpon>FrmNewFaultyProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmNewProduct.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -189,6 +201,12 @@
     </Compile>
     <Compile Include="Forms\FrmProductStats.Designer.cs">
       <DependentUpon>FrmProductStats.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmProductTraceList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmProductTraceList.Designer.cs">
+      <DependentUpon>FrmProductTraceList.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmSaleList.cs">
       <SubType>Form</SubType>
@@ -243,6 +261,12 @@
     <EmbeddedResource Include="Forms\FrmNewEmployee.resx">
       <DependentUpon>FrmNewEmployee.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmNewProductTrace.resx">
+      <DependentUpon>FrmNewProductTrace.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmNewFaultyProduct.resx">
+      <DependentUpon>FrmNewFaultyProduct.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmNewProduct.resx">
       <DependentUpon>FrmNewProduct.cs</DependentUpon>
     </EmbeddedResource>
@@ -257,6 +281,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmProductStats.resx">
       <DependentUpon>FrmProductStats.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmProductTraceList.resx">
+      <DependentUpon>FrmProductTraceList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmSaleList.resx">
       <DependentUpon>FrmSaleList.cs</DependentUpon>

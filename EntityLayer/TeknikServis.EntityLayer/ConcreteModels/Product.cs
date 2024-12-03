@@ -14,7 +14,6 @@ namespace TeknikServis.EntityLayer.ConcreteModels
         public byte Category { get; set; }
 
         public Category CategoryNavigation { get; set; }
-        public ICollection<ProductTrace> ProductTraces { get; set; }
         public ICollection<Sale> Sales { get; set; }
     }
 

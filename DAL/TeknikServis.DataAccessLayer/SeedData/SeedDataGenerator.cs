@@ -22,15 +22,18 @@ namespace TeknikServis.DataAccessLayer.SeedData
                 byte maxNoteCount = 100;
                 short maxSaleCount = 500;
                 byte maxActionCount = 150;
+                byte maxProductTraceCount = maxActionCount;
 
-                if (db.Customers.Count() <= maxCustomerCount || db.Departments.Count() <= maxDepartmentCount || db.Categories.Count() <= maxCategoryCount || db.Notes.Count() <= maxNoteCount || db.Actions.Count() <= maxActionCount || db.Sales.Count() <= maxSaleCount)
+                if (db.Customers.Count() <= maxCustomerCount || db.Departments.Count() <= maxDepartmentCount || db.Categories.Count() <= maxCategoryCount || db.Notes.Count() <= maxNoteCount || db.Actions.Count() <= maxActionCount || db.Sales.Count() <= maxSaleCount || db.ProductTraces.Count() < maxActionCount)
                 {
+
                     byte customerCountToGenerate = (byte)(maxCustomerCount - db.Customers.Count());
                     byte departmentCountToGenerate = (byte)(maxDepartmentCount - db.Departments.Count());
                     byte categoryCountToGenerate = (byte)(maxCategoryCount - db.Categories.Count());
                     byte noteCountToGenerate = (byte)(maxNoteCount - db.Notes.Count());
                     short saleCountToGenerate = (short)(maxSaleCount - db.Sales.Count());
                     byte actionCountToGenerate = (byte)(maxActionCount - db.Actions.Count());
+                    byte productTraceToGenerate = (byte)(maxProductTraceCount - db.ProductTraces.Count());
 
                     GenerateCategoriesAndProducts(categoryCountToGenerate);
                     GenerateCustomers(customerCountToGenerate);
@@ -38,12 +41,69 @@ namespace TeknikServis.DataAccessLayer.SeedData
                     GenerateNotes(noteCountToGenerate);
 
                     var createdSales = GenerateSales(saleCountToGenerate);
-                    GenerateActions(actionCountToGenerate, createdSales);
+                    var createdActions = GenerateActions(actionCountToGenerate, createdSales);
+                    GenerateProductTraces(productTraceToGenerate, createdActions);
 
                     await db.SaveChangesAsync();
                 }
 
                 #region Faker Generation Methods
+
+                void GenerateProductTraces(byte productTraceToGenerate, List<EntityLayer.ConcreteModels.Action> actions)
+                {
+                    var faker = new Faker();
+
+                    foreach (var action in actions.Take(productTraceToGenerate))
+                    {
+                        if (!db.ProductTraces.Any(pt => pt.ProductSerialNumber == action.ProductSerialNumber))
+                        {
+                            var productTrace = new ProductTrace
+                            {
+                                ProductSerialNumber = action.ProductSerialNumber,
+                                ProductTraceDate = action.CompletedDate ?? DateTime.Now,
+                                ProductTraceInformation = EnsureMaxLength(faker.Lorem.Sentence(), 250)
+                            };
+
+                            db.ProductTraces.Add(productTrace);
+                        }
+                    }
+                    db.SaveChanges();
+                }
+
+                List<EntityLayer.ConcreteModels.Action> GenerateActions(byte actionCountToGenerate, List<Sale> sales)
+                {
+                    if (actionCountToGenerate <= 0)
+                        return new List<EntityLayer.ConcreteModels.Action>();
+
+                    var faker = new Faker();
+                    var existingEmployees = db.Employees.Select(e => e.EmployeeId).ToList();
+
+                    var selectedSales = sales.OrderBy(x => faker.Random.Number()).Take(actionCountToGenerate).ToList();
+
+                    var actions = new List<EntityLayer.ConcreteModels.Action>();
+
+                    foreach (var sale in selectedSales)
+                    {
+                        if (!db.Actions.Any(a => a.ProductSerialNumber == sale.ProductSerialNumber))
+                        {
+                            var action = new EntityLayer.ConcreteModels.Action
+                            {
+                                Customer = sale.Customer,
+                                Employee = faker.PickRandom(existingEmployees),
+                                AcceptedDate = sale.SaleDate.AddDays(faker.Random.Number(1, 30)),
+                                CompletedDate = sale.SaleDate.AddDays(faker.Random.Number(31, 60)),
+                                ProductSerialNumber = sale.ProductSerialNumber
+                            };
+
+                            actions.Add(action);
+                            db.Actions.Add(action);
+                        }
+                    }
+
+                    db.SaveChanges();
+                    return actions;
+                }
+
 
                 void GenerateDepartmentsAndEmployees(byte departmentCountToGenerate)
                 {
@@ -269,31 +329,6 @@ namespace TeknikServis.DataAccessLayer.SeedData
                     db.SaveChanges();
 
                     return sales;
-                }
-
-                void GenerateActions(byte actionCountToGenerate, List<Sale> sales)
-                {
-                    if (actionCountToGenerate <= 0) return;
-
-                    var faker = new Faker();
-                    var existingEmployees = db.Employees.Select(e => e.EmployeeId).ToList();
-
-                    var selectedSales = sales.OrderBy(x => faker.Random.Number()).Take(actionCountToGenerate).ToList();
-
-                    foreach (var sale in selectedSales)
-                    {
-                        var action = new EntityLayer.ConcreteModels.Action
-                        {
-                            Customer = sale.Customer,
-                            Employee = faker.PickRandom(existingEmployees),
-                            AcceptedDate = sale.SaleDate.AddDays(faker.Random.Number(1, 30)),
-                            CompletedDate = sale.SaleDate.AddDays(faker.Random.Number(31, 60)),
-                            ProductSerialNumber = sale.ProductSerialNumber
-                        };
-
-                        db.Actions.Add(action);
-                    }
-                    db.SaveChanges();
                 }
 
                 #region Helper Methods

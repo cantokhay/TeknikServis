@@ -157,5 +157,24 @@ namespace TeknikServis
             frmSaleList.MdiParent = this;
             frmSaleList.Show();
         }
+
+        private void btnNewFaultyProduct_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.FrmNewFaultyProduct frmNewFaultyProduct = new Forms.FrmNewFaultyProduct();
+            frmNewFaultyProduct.Show();
+        }
+
+        private void btnProductTrace_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.FrmNewProductTrace frmNewProductTrace = new Forms.FrmNewProductTrace();
+            frmNewProductTrace.Show();
+        }
+
+        private void btnProductTraceList_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Forms.FrmProductTraceList frmProductTraceList = new Forms.FrmProductTraceList();
+            frmProductTraceList.MdiParent = this;
+            frmProductTraceList.Show();
+        }
     }
 }

@@ -7,13 +7,13 @@ namespace TeknikServis.DataAccessLayer.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.5.1")]
-    public sealed partial class initPC : IMigrationMetadata
+    public sealed partial class ptracedbupdate : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(initPC));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(ptracedbupdate));
         
         string IMigrationMetadata.Id
         {
-            get { return "202411291910228_init-PC"; }
+            get { return "202412030902231_ptrace-db-update"; }
         }
         
         string IMigrationMetadata.Source

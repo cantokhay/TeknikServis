@@ -7,7 +7,7 @@ namespace TeknikServis.EntityLayer.ConcreteModels
         public int Customer { get; set; } 
         public short Employee { get; set; } 
         public System.DateTime AcceptedDate { get; set; }
-        public System.DateTime CompletedDate { get; set; }
+        public System.DateTime? CompletedDate { get; set; }
         public string ProductSerialNumber { get; set; }
 
         public Customer CustomerNavigation { get; set; }

@@ -19,6 +19,16 @@ namespace TeknikServis.Forms
 
         private void btnNewSaleSave_Click(object sender, EventArgs e)
         {
+            if (!IsValidSerialNumber(txtProductSerialNumber.Text))
+            {
+                MessageBox.Show("Product serial number must be exactly 5 characters long and include only letters and/or digits.",
+                                "Invalid Input",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning);
+                txtProductSerialNumber.Text = string.Empty;
+                txtProductSerialNumber.Focus();
+                return;
+            }
             Sale sale = new Sale();
             AssignSaleInfo(sale);
             db.Sales.Add(sale);
@@ -63,10 +73,15 @@ namespace TeknikServis.Forms
             sale.Product = int.Parse(lueProducts.EditValue.ToString());
             sale.Customer = int.Parse(lueCustomers.EditValue.ToString());
             sale.Employee = short.Parse(lueEmployees.EditValue.ToString());
-            sale.SaleDate = DateTime.Parse(dtpSaleDate.Text);
+            sale.SaleDate = DateTime.Parse(txtSaleDate.Text);
             sale.SaleQuantity = short.Parse(numSaleQuantity.Text);
             sale.SaleTotalPrice = decimal.Parse(txtSalePrice.Text);
             sale.ProductSerialNumber = txtProductSerialNumber.Text;
+        }
+
+        private bool IsValidSerialNumber(string serialNumber)
+        {
+            return serialNumber.Length == 5 && serialNumber.All(char.IsLetterOrDigit);
         }
 
         #endregion

@@ -39,7 +39,7 @@
             this.btnBrandStats = new DevExpress.XtraBars.BarButtonItem();
             this.btnFaultyProductList = new DevExpress.XtraBars.BarButtonItem();
             this.btnNewFaultyProduct = new DevExpress.XtraBars.BarButtonItem();
-            this.btnFaultDetail = new DevExpress.XtraBars.BarButtonItem();
+            this.btnProductTrace = new DevExpress.XtraBars.BarButtonItem();
             this.btnCreateQRCode = new DevExpress.XtraBars.BarButtonItem();
             this.btnCreateBarcode = new DevExpress.XtraBars.BarButtonItem();
             this.btnCustomerList = new DevExpress.XtraBars.BarButtonItem();
@@ -84,8 +84,8 @@
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup16 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup15 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage8 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage5 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -100,6 +100,7 @@
             this.ribbonPage6 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPage9 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
+            this.btnProductTraceList = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.SuspendLayout();
@@ -118,7 +119,7 @@
             this.btnBrandStats,
             this.btnFaultyProductList,
             this.btnNewFaultyProduct,
-            this.btnFaultDetail,
+            this.btnProductTrace,
             this.btnCreateQRCode,
             this.btnCreateBarcode,
             this.btnCustomerList,
@@ -150,9 +151,10 @@
             this.btnYoutube,
             this.btnNoteList,
             this.btnNewSale,
-            this.btnSaleList});
+            this.btnSaleList,
+            this.btnProductTraceList});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 44;
+            this.ribbonControl1.MaxItemId = 45;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -224,30 +226,32 @@
             // 
             // btnNewFaultyProduct
             // 
-            this.btnNewFaultyProduct.Caption = "Faulty Product Entry";
+            this.btnNewFaultyProduct.Caption = "New Faulty Product";
             this.btnNewFaultyProduct.Id = 9;
-            this.btnNewFaultyProduct.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem9.ImageOptions.LargeImage")));
+            this.btnNewFaultyProduct.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnNewFaultyProduct.ImageOptions.LargeImage")));
             this.btnNewFaultyProduct.Name = "btnNewFaultyProduct";
+            this.btnNewFaultyProduct.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnNewFaultyProduct_ItemClick);
             // 
-            // btnFaultDetail
+            // btnProductTrace
             // 
-            this.btnFaultDetail.Caption = "Fault Description";
-            this.btnFaultDetail.Id = 10;
-            this.btnFaultDetail.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem10.ImageOptions.LargeImage")));
-            this.btnFaultDetail.Name = "btnFaultDetail";
+            this.btnProductTrace.Caption = "New Product Trace";
+            this.btnProductTrace.Id = 10;
+            this.btnProductTrace.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnProductTrace.ImageOptions.LargeImage")));
+            this.btnProductTrace.Name = "btnProductTrace";
+            this.btnProductTrace.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnProductTrace_ItemClick);
             // 
             // btnCreateQRCode
             // 
             this.btnCreateQRCode.Caption = "Create QR Code";
             this.btnCreateQRCode.Id = 11;
-            this.btnCreateQRCode.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem11.ImageOptions.LargeImage")));
+            this.btnCreateQRCode.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnCreateQRCode.ImageOptions.LargeImage")));
             this.btnCreateQRCode.Name = "btnCreateQRCode";
             // 
             // btnCreateBarcode
             // 
             this.btnCreateBarcode.Caption = "Create Barcode";
             this.btnCreateBarcode.Id = 12;
-            this.btnCreateBarcode.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem12.ImageOptions.LargeImage")));
+            this.btnCreateBarcode.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnCreateBarcode.ImageOptions.LargeImage")));
             this.btnCreateBarcode.Name = "btnCreateBarcode";
             // 
             // btnCustomerList
@@ -278,7 +282,7 @@
             // 
             this.btnCustomerMovements.Caption = "Customer Movements";
             this.btnCustomerMovements.Id = 16;
-            this.btnCustomerMovements.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem15.ImageOptions.LargeImage")));
+            this.btnCustomerMovements.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnCustomerMovements.ImageOptions.LargeImage")));
             this.btnCustomerMovements.Name = "btnCustomerMovements";
             this.btnCustomerMovements.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnCustomerMovements_ItemClick);
             // 
@@ -286,42 +290,42 @@
             // 
             this.btnEmployeeMovements.Caption = "Employee Movements";
             this.btnEmployeeMovements.Id = 17;
-            this.btnEmployeeMovements.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem16.ImageOptions.LargeImage")));
+            this.btnEmployeeMovements.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnEmployeeMovements.ImageOptions.LargeImage")));
             this.btnEmployeeMovements.Name = "btnEmployeeMovements";
             // 
             // btnNewInvoice
             // 
             this.btnNewInvoice.Caption = "New Invoice";
             this.btnNewInvoice.Id = 18;
-            this.btnNewInvoice.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem17.ImageOptions.LargeImage")));
+            this.btnNewInvoice.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnNewInvoice.ImageOptions.LargeImage")));
             this.btnNewInvoice.Name = "btnNewInvoice";
             // 
             // btnAddProductToInvoice
             // 
             this.btnAddProductToInvoice.Caption = "Add Product in Invoice";
             this.btnAddProductToInvoice.Id = 19;
-            this.btnAddProductToInvoice.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem18.ImageOptions.LargeImage")));
+            this.btnAddProductToInvoice.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnAddProductToInvoice.ImageOptions.LargeImage")));
             this.btnAddProductToInvoice.Name = "btnAddProductToInvoice";
             // 
             // btnInvoiceDetailedSearch
             // 
             this.btnInvoiceDetailedSearch.Caption = "Invoice Detailed Search";
             this.btnInvoiceDetailedSearch.Id = 20;
-            this.btnInvoiceDetailedSearch.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem19.ImageOptions.LargeImage")));
+            this.btnInvoiceDetailedSearch.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnInvoiceDetailedSearch.ImageOptions.LargeImage")));
             this.btnInvoiceDetailedSearch.Name = "btnInvoiceDetailedSearch";
             // 
             // btnInvoicePDF
             // 
             this.btnInvoicePDF.Caption = "Invoice PDF";
             this.btnInvoicePDF.Id = 21;
-            this.btnInvoicePDF.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem20.ImageOptions.LargeImage")));
+            this.btnInvoicePDF.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnInvoicePDF.ImageOptions.LargeImage")));
             this.btnInvoicePDF.Name = "btnInvoicePDF";
             // 
             // btnPassiveInvoices
             // 
             this.btnPassiveInvoices.Caption = "Passive Invoices";
             this.btnPassiveInvoices.Id = 22;
-            this.btnPassiveInvoices.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem21.ImageOptions.LargeImage")));
+            this.btnPassiveInvoices.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnPassiveInvoices.ImageOptions.LargeImage")));
             this.btnPassiveInvoices.Name = "btnPassiveInvoices";
             // 
             // btnEmployeeList
@@ -524,7 +528,8 @@
             // 
             this.ribbonPageGroup12.ItemLinks.Add(this.btnFaultyProductList);
             this.ribbonPageGroup12.ItemLinks.Add(this.btnNewFaultyProduct);
-            this.ribbonPageGroup12.ItemLinks.Add(this.btnFaultDetail);
+            this.ribbonPageGroup12.ItemLinks.Add(this.btnProductTrace);
+            this.ribbonPageGroup12.ItemLinks.Add(this.btnProductTraceList);
             this.ribbonPageGroup12.Name = "ribbonPageGroup12";
             this.ribbonPageGroup12.Text = "Faultry";
             // 
@@ -566,19 +571,19 @@
             this.ribbonPage4.Name = "ribbonPage4";
             this.ribbonPage4.Text = "Employees";
             // 
-            // ribbonPageGroup4
-            // 
-            this.ribbonPageGroup4.ItemLinks.Add(this.btnEmployeeList);
-            this.ribbonPageGroup4.ItemLinks.Add(this.btnNewEmployee);
-            this.ribbonPageGroup4.Name = "ribbonPageGroup4";
-            this.ribbonPageGroup4.Text = "Employee";
-            // 
             // ribbonPageGroup15
             // 
             this.ribbonPageGroup15.ItemLinks.Add(this.btnDepartmentList);
             this.ribbonPageGroup15.ItemLinks.Add(this.btnNewDepartment);
             this.ribbonPageGroup15.Name = "ribbonPageGroup15";
             this.ribbonPageGroup15.Text = "Department";
+            // 
+            // ribbonPageGroup4
+            // 
+            this.ribbonPageGroup4.ItemLinks.Add(this.btnEmployeeList);
+            this.ribbonPageGroup4.ItemLinks.Add(this.btnNewEmployee);
+            this.ribbonPageGroup4.Name = "ribbonPageGroup4";
+            this.ribbonPageGroup4.Text = "Employee";
             // 
             // ribbonPage8
             // 
@@ -681,6 +686,14 @@
             // 
             this.xtraTabbedMdiManager1.MdiParent = this;
             // 
+            // btnProductTraceList
+            // 
+            this.btnProductTraceList.Caption = "Product Trace List";
+            this.btnProductTraceList.Id = 44;
+            this.btnProductTraceList.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
+            this.btnProductTraceList.Name = "btnProductTraceList";
+            this.btnProductTraceList.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnProductTraceList_ItemClick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -733,7 +746,7 @@
         private DevExpress.XtraBars.BarButtonItem btnNewFaultyProduct;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup11;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup12;
-        private DevExpress.XtraBars.BarButtonItem btnFaultDetail;
+        private DevExpress.XtraBars.BarButtonItem btnProductTrace;
         private DevExpress.XtraBars.BarButtonItem btnCreateQRCode;
         private DevExpress.XtraBars.BarButtonItem btnCreateBarcode;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup13;
@@ -771,6 +784,7 @@
         private DevExpress.XtraBars.BarButtonItem btnNewSale;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup16;
         private DevExpress.XtraBars.BarButtonItem btnSaleList;
+        private DevExpress.XtraBars.BarButtonItem btnProductTraceList;
     }
 }
 

@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class initPC : DbMigration
+    public partial class ptracedbupdate : DbMigration
     {
         public override void Up()
         {
@@ -15,7 +15,7 @@
                         Customer = c.Int(nullable: false),
                         Employee = c.Short(nullable: false),
                         AcceptedDate = c.DateTime(nullable: false),
-                        CompletedDate = c.DateTime(nullable: false),
+                        CompletedDate = c.DateTime(),
                         ProductSerialNumber = c.String(maxLength: 5),
                     })
                 .PrimaryKey(t => t.ActionId)
@@ -138,20 +138,6 @@
                 .PrimaryKey(t => t.CategoryId);
             
             CreateTable(
-                "dbo.ProductTraces",
-                c => new
-                    {
-                        ProductTraceId = c.Int(nullable: false, identity: true),
-                        ProductTraceDate = c.DateTime(nullable: false, precision: 7, storeType: "datetime2"),
-                        ProductSerialNumber = c.String(maxLength: 5),
-                        ProductTraceInformation = c.String(maxLength: 250),
-                        Product_ProductId = c.Int(),
-                    })
-                .PrimaryKey(t => t.ProductTraceId)
-                .ForeignKey("dbo.Products", t => t.Product_ProductId)
-                .Index(t => t.Product_ProductId);
-            
-            CreateTable(
                 "dbo.InvoiceDetails",
                 c => new
                     {
@@ -213,6 +199,17 @@
                     })
                 .PrimaryKey(t => t.NoteId);
             
+            CreateTable(
+                "dbo.ProductTraces",
+                c => new
+                    {
+                        ProductTraceId = c.Int(nullable: false, identity: true),
+                        ProductTraceDate = c.DateTime(nullable: false, precision: 7, storeType: "datetime2"),
+                        ProductSerialNumber = c.String(maxLength: 5),
+                        ProductTraceInformation = c.String(maxLength: 250),
+                    })
+                .PrimaryKey(t => t.ProductTraceId);
+            
         }
         
         public override void Down()
@@ -221,7 +218,6 @@
             DropForeignKey("dbo.Actions", "Customer", "dbo.Customers");
             DropForeignKey("dbo.InvoiceDetails", "InvoiceNavigation_InvoiceId", "dbo.Invoices");
             DropForeignKey("dbo.Sales", "Product", "dbo.Products");
-            DropForeignKey("dbo.ProductTraces", "Product_ProductId", "dbo.Products");
             DropForeignKey("dbo.Products", "Category", "dbo.Categories");
             DropForeignKey("dbo.Sales", "Employee", "dbo.Employees");
             DropForeignKey("dbo.Sales", "Customer", "dbo.Customers");
@@ -229,7 +225,6 @@
             DropForeignKey("dbo.Employees", "Department", "dbo.Departments");
             DropForeignKey("dbo.Invoices", "CustomerNavigation_CustomerId", "dbo.Customers");
             DropIndex("dbo.InvoiceDetails", new[] { "InvoiceNavigation_InvoiceId" });
-            DropIndex("dbo.ProductTraces", new[] { "Product_ProductId" });
             DropIndex("dbo.Products", new[] { "Category" });
             DropIndex("dbo.Sales", new[] { "Employee" });
             DropIndex("dbo.Sales", new[] { "Customer" });
@@ -239,12 +234,12 @@
             DropIndex("dbo.Invoices", new[] { "CustomerNavigation_CustomerId" });
             DropIndex("dbo.Actions", new[] { "Employee" });
             DropIndex("dbo.Actions", new[] { "Customer" });
+            DropTable("dbo.ProductTraces");
             DropTable("dbo.Notes");
             DropTable("dbo.FaultDetails");
             DropTable("dbo.Expenses");
             DropTable("dbo.Admins");
             DropTable("dbo.InvoiceDetails");
-            DropTable("dbo.ProductTraces");
             DropTable("dbo.Categories");
             DropTable("dbo.Products");
             DropTable("dbo.Sales");
